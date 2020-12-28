@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Limelight', cursive;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.header-container {
+    padding-top: 164px;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link span {
+    color: #ee0d0d;
+}
+
+.nav-link:hover {
+    color: #ee0d0d;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #ee0d0d;
+    color: white;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+::placeholder {
+    color: black !important;
+    opacity: 1 !important;
+}
+
+:-ms-input-placeholder {
+    color: black !important;
+}
+
+::-ms-input-placeholder {
+    color: black !important;
+}
+
+/* ---------------------------------------------------------------Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
