@@ -4,6 +4,7 @@ html {
 
 body {
     background-size: cover;
+    background-color: #bebdb8;
     height: calc(100vh - 164px);
     font-family: 'DM Serif Display', serif;
     color: black !important;
@@ -83,7 +84,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: #bebdb8;
     z-index: -1;
 }
 
