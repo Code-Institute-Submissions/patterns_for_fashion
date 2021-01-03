@@ -2,7 +2,7 @@
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a href="#" class="logo-font font-weight-bold nav-link mr-5" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Garments
+                Filter
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="" class="dropdown-item">By Price</a>
@@ -11,21 +11,20 @@
                 <a href="{% url 'products' %}" class="dropdown-item">All Garments</a>
             </div>
         </li>
-        <li class="nav-item dropdown">
-            <a href="#" class="logo-font font-weight-bold nav-link mr-5" id="dreses-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a href="{% url 'products' %}?category=dresses" class="logo-font font-weight-bold nav-link mr-5" id="dreses-link" aria-haspopup="true" aria-expanded="false">
                 Dresses
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="dresses-link">
-                <a href="" class="dropdown-item">Dresses</a>
-            </div>
         </li>
-        <li class="nav-item dropdown">
-            <a href="#" class="logo-font font-weight-bold nav-link mr-5" id="shirts-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a href="{% url 'products' %}?category=shirts" class="logo-font font-weight-bold nav-link mr-5" id="shirts-link" aria-haspopup="true" aria-expanded="false">
                 Shirts
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="shirts-link">
-                <a href="" class="dropdown-item">Shirts</a>
-            </div>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'products' %}?category=shirts,dresses" class="logo-font font-weight-bold nav-link mr-5" id="all-garments-link" aria-haspopup="true" aria-expanded="false">
+                All Garments
+            </a>
         </li>
     </ul>
 </div>
