@@ -4,11 +4,13 @@ html {
 
 body {
     background-size: cover;
-    background-color: #f1f1f0;
+    background: #f1f1f0;
     height: calc(100vh - 164px);
     font-family: 'DM Serif Display', serif;
     color: black !important;
 }
+
+
 
 /* from Bulma */
 .icon {
@@ -36,11 +38,11 @@ body {
 }
 
 .nav-link span {
-    color: #ee0d0d;
+    color: #b30606;
 }
 
 .nav-link:hover {
-    color: #ee0d0d;
+    color: #b30606;
 }
 
 .btn-black {
@@ -64,12 +66,12 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #ee0d0d;
+    background: #b30606;
     color: white;
 }
 
 .buy-button {
-    background: black;
+    background: #b30606;
     color: white;
     min-width: 260px;
 }
@@ -144,5 +146,10 @@ body {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .buy-button {
+        font-size: small;
+        min-width: 170px;
     }
 }
