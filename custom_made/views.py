@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
-from .forms import CustomProductForm
+from custom_made.forms import CustomProductForm
 
 
-def custom_made(request):
+def custom_made_view(request):
     custom_product_form = CustomProductForm()
     template = 'custom_made/custom_made.html'
     context = {
