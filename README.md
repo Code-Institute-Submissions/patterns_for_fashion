@@ -144,7 +144,7 @@ All images used for the ads posted in the website were taken by the developer an
     flashes and the user gets redirected to log in page.
 -   If the user tries to log in with a username which doesn't exist in the database, the message "Username doesn't exists"
     flashes and the user gets redirected to register page.
-### Messages
+### Toast Messages
 ### Contact Form
 -   The submitted message arrives in the connected email, but the flash message doesn't display as expected as explained in the known
     bugs section. For this reason, in the javascript code was added "this.reset()" so that at least the form gets refreshed after being submitted.
@@ -166,6 +166,8 @@ All images used for the ads posted in the website were taken by the developer an
 ## Known Bugs
 -   After submitting the message in the contact form the flash message doesn't display as expected and the form doesn't redirects to home page
     because it interracts with the javascript sendEmail.js file.
+# Database Models
+
 # Deployment
 # Forking the GitHub Repository
 
@@ -212,4 +214,5 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ## Tutor Support
 ## Mentor
 ## Slack Comunity
+https://github.com/AsunaMasuda/FloweryDays from peer-review code found an inspirational article where I learned about database modelling
 ## My Family
