@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'custom_made/css/custom_made.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -15,25 +19,39 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col text-center mt-3">
-                <h2>Custom Made Products Page</h2>
+            <div class="col-12 text-center mt-3">
+                <h2>Custom Made Products</h2>
                 <hr class="w-50 mb-1">
             </div>
-            <div class="col-12">
+            <div class="col-12 col-lg-6">
                 <p class="text-muted">Please fill out the measurements fields as described below each field</p>
                 <form action="{% url 'custom_made_view' %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small px-2 w-auto">Measurements</legend>
+                        <legend class="fieldset-label px-2 w-auto">Custom Made Price</legend>
+                        <span class="lead mb-0 text-left font-weight-bold">€ {{ product.price_custom }}</span>
+                    </fieldset>
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="fieldset-label px-2 w-auto">Measurements Fields and Instructions</legend>
+                        <p>First attach an elastic band horizontally at the waist. All lengths are measured to the bottom and from the bottom of the elastic band.</p>
                         {{ custom_product_form.shoulder_width | as_crispy_field }}
+                        <pMeasure from the neck to the tip of the shoulder.</p>
                         {{ custom_product_form.chest_width | as_crispy_field }}
+                        <p>At 5 cm below the neck hole, measure the chest width to an imaginary armhole line.</p>
                         {{ custom_product_form.bust_height | as_crispy_field }}
+                        <p>Measure from the neck pit to the height of bust point.</p>
                         {{ custom_product_form.bust_length | as_crispy_field }}
+                        <p>Measure from the neck pit to the bottom of the waistband, with an inch over space on the sternum.</p>
                         {{ custom_product_form.hip_circ1 | as_crispy_field }}
+                        <p>Measure the hip circumference at 10cm below the waist, not too tight.</p>
                         {{ custom_product_form.hip_circ2 | as_crispy_field }}
+                        <p>Measure the hip circumference at 22cm below the waist across the thickest part of the hip.</p>
                         {{ custom_product_form.back_width | as_crispy_field }}
+                        <p>Measure 8cm below the nape of the neck, the width to an imaginary armhole line.</p>
                         {{ custom_product_form.back_length | as_crispy_field }}
+                        <p>Measure from the point of the neck to the bottom of the waistband.</p>
                         {{ custom_product_form.chest_circ | as_crispy_field }}
+                        <p>Measure the chest circumference smoothly over the thickest part of the bust</p>
                         {{ custom_product_form.extra_info | as_crispy_field }}
                     </fieldset>
                 </form>
