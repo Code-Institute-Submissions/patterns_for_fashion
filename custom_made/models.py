@@ -28,7 +28,7 @@ class CustomProduct(models.Model):
     back_width = models.DecimalField(default=False, max_digits=6, decimal_places=2)
     back_length = models.DecimalField(default=False, max_digits=6, decimal_places=2)
     chest_circ = models.DecimalField(default=False, max_digits=6, decimal_places=2)
-    extra_info = models.TextField(default=False, max_length=200)
+    extra_info = models.TextField(max_length=200)
 
     def __str__(self):
         return self.user

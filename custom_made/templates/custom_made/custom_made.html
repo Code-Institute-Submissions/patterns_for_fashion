@@ -20,15 +20,28 @@
                 <hr class="w-50 mb-1">
             </div>
             <div class="col-12">
-                <p class="text-muted">Please fill out the measurements fields as described in the description</p>
-                <form action="{% url 'custom_made' %}" method="POST" id="custom-made-form">
+                <p class="text-muted">Please fill out the measurements fields as described below each field</p>
+                <form action="{% url 'custom_made_view' %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small px-2 w-auto">Measurements</legend>
-                        {{  }}
+                        {{ custom_product_form.shoulder_width | as_crispy_field }}
+                        {{ custom_product_form.chest_width | as_crispy_field }}
+                        {{ custom_product_form.bust_height | as_crispy_field }}
+                        {{ custom_product_form.bust_length | as_crispy_field }}
+                        {{ custom_product_form.hip_circ1 | as_crispy_field }}
+                        {{ custom_product_form.hip_circ2 | as_crispy_field }}
+                        {{ custom_product_form.back_width | as_crispy_field }}
+                        {{ custom_product_form.back_length | as_crispy_field }}
+                        {{ custom_product_form.chest_circ | as_crispy_field }}
+                        {{ custom_product_form.extra_info | as_crispy_field }}
                     </fieldset>
                 </form>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
 {% endblock %}
