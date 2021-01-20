@@ -28,21 +28,6 @@
                     <legend class="fieldset-label px-2 w-auto">Custom Made Price</legend>
                     <span class="lead mb-0 text-left font-weight-bold">€ {{ product.price_custom }}</span>
                 </fieldset>
-                <form action="{% url 'fabrics' %}" method="POST" id="fabric">
-                    {% csrf_token %}
-                    <fielset class="rounded px-3 mb-5">
-                        {% for fabric in fabrics %}
-                            <label for="fabrics">Choose a fabric:</label>
-                            <select id="fabrics" name="fabrics" form="fabricform">
-                                <option value="{{ fabric.image.url }}">
-                                    <a href="{% url 'view_fabrics' fabric.id %}" target="_blank">
-                                        <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}" class="card-img-top img-fluid">
-                                    </a>
-                                </option>
-                            </select>
-                        {% endfor %}
-                    </fielset>
-                </form>
                 <p class="text-muted">Please fill out the measurements fields as described below each field</p>
                 <form action="{% url 'custom_made_view' %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
@@ -69,6 +54,18 @@
                         <p>Measure the chest circumference smoothly over the thickest part of the bust</p>
                         {{ custom_product_form.extra_info | as_crispy_field }}
                     </fieldset>
+                    <fielset class="rounded px-3 mb-5">
+                        {% for fabric in fabrics %}
+                            <label for="fabrics">Choose a fabric:</label>
+                            <select id="fabrics" name="fabrics" form="fabricform">
+                                <option value="{{ fabric.image.url }}">
+                                    <a href="{% url 'view_fabrics' fabric.id %}" target="_blank">
+                                        <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}" class="card-img-top img-fluid">
+                                    </a>
+                                </option>
+                            </select>
+                        {% endfor %}
+                    </fielset>
                 </form>
             </div>
         </div>

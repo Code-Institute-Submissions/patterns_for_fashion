@@ -5,6 +5,7 @@ from .models import CustomProduct
 class CustomProductForm(forms.ModelForm):
     class Meta:
         model = CustomProduct
+        fabrics = ('fabrics',)
         readonly_fields = ('price_custom',)
         fields = ('shoulder_width', 'chest_width',
                   'bust_height', 'bust_length', 'hip_circ1',
