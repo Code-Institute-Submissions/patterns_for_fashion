@@ -10,5 +10,7 @@ class FabricAdmin(admin.ModelAdmin):
         'image',
     )
 
+    ordering = ('name',)
+
 
 admin.site.register(Fabric, FabricAdmin)
