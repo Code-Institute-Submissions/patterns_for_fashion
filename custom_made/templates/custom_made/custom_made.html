@@ -24,18 +24,28 @@
                 <hr class="w-50 mb-1">
             </div>
             <div class="col-12 col-lg-6">
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label px-2 w-auto">Custom Made Price</legend>
+                    <span class="lead mb-0 text-left font-weight-bold">€ {{ product.price_custom }}</span>
+                </fieldset>
+                <fielset class="rounded px-3 mb-5">
+                    <label for="fabrics">Choose a fabric:</label>
+                    <select id="fabrics" name="fabrics" form="fabricform">
+                        <option value="flowers">Flowers</option>
+                        <option value="grey">Grey</option>
+                        <option value="grey-pattern">Grey Pattern</option>
+                        <option value="cherries">Cherries</option>
+                        <option value="pink">Pink</option>
+                    </select>
+                </fielset>
                 <p class="text-muted">Please fill out the measurements fields as described below each field</p>
                 <form action="{% url 'custom_made_view' %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label px-2 w-auto">Custom Made Price</legend>
-                        <span class="lead mb-0 text-left font-weight-bold">€ {{ product.price_custom }}</span>
-                    </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label px-2 w-auto">Measurements Fields and Instructions</legend>
                         <p>First attach an elastic band horizontally at the waist. All lengths are measured to the bottom and from the bottom of the elastic band.</p>
                         {{ custom_product_form.shoulder_width | as_crispy_field }}
-                        <pMeasure from the neck to the tip of the shoulder.</p>
+                        <p>Measure from the neck to the tip of the shoulder.</p>
                         {{ custom_product_form.chest_width | as_crispy_field }}
                         <p>At 5 cm below the neck hole, measure the chest width to an imaginary armhole line.</p>
                         {{ custom_product_form.bust_height | as_crispy_field }}
