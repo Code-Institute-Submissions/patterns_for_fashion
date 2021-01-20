@@ -31,6 +31,7 @@
                 <p class="text-muted">Please fill out the measurements fields as described below each field</p>
                 <form action="{% url 'custom_made_view' %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
+                    {{ form|crispy }}
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label px-2 w-auto">Measurements Fields and Instructions</legend>
                         <p>First attach an elastic band horizontally at the waist. All lengths are measured to the bottom and from the bottom of the elastic band.</p>
@@ -54,18 +55,24 @@
                         <p>Measure the chest circumference smoothly over the thickest part of the bust</p>
                         {{ custom_product_form.extra_info | as_crispy_field }}
                     </fieldset>
-                    <fielset class="rounded px-3 mb-5">
-                        {% for fabric in fabrics %}
-                            <label for="fabrics">Choose a fabric:</label>
-                            <select id="fabrics" name="fabrics" form="fabricform">
-                                <option value="{{ fabric.image.url }}">
-                                    <a href="{% url 'view_fabrics' fabric.id %}" target="_blank">
-                                        <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}" class="card-img-top img-fluid">
-                                    </a>
-                                </option>
-                            </select>
-                        {% endfor %}
-                    </fielset>
+                    <fieldset class="rounded px-3 mb-5">
+                        <!-- Practically comment these lines out and lets do a simple div with <img> -->
+                        <!-- <label for="fabrics">Choose a fabric:</label>
+                            {% for fabric in fabrics %}
+                                <select id="fabrics" name="fabrics" form="fabricform">
+                                    <option value="{{ MEDIA_URL}}{{ fabric.image }}">
+                                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="fabric image">
+                                    </option>
+                                </select>
+                            {% endfor %} -->
+                            <!-- so commenting out all of the above lines down to here -->
+                            <!-- Then use just this: I'm inserting them as comment but you can uncomment these lines down below-->
+                            {% for fabric in fabrics %}
+                            <div>
+                                <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="{{ fabric.name }}">
+                            </div>
+                            {% endfor %}
+                    </fieldset>
                 </form>
             </div>
         </div>
