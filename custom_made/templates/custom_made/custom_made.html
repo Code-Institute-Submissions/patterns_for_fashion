@@ -25,8 +25,16 @@
             </div>
             <div class="col-12 col-lg-6">
                 <fieldset class="rounded px-3 mb-5">
+                    <legend class="fieldset-label px-2 w-auto">Garment Name</legend>
+                    {% for product in products %}
+                        <span class="lead mb-0 text-left font-weight-bold">{{ product.name}}</span>
+                    {% endfor %}
+                </fieldset>
+                <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label px-2 w-auto">Custom Made Price</legend>
+                    {% for product in products %}
                     <span class="lead mb-0 text-left font-weight-bold">€ {{ product.price_custom }}</span>
+                    {% endfor %}
                 </fieldset>
                 <p class="text-muted">Please fill out the measurements fields as described below each field</p>
                 <form action="{% url 'custom_made_view' %}" method="POST" id="custom-made-form">

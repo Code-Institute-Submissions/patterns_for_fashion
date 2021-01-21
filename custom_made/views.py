@@ -6,7 +6,7 @@ from products.models import Product
 
 
 def custom_made_view(request):
-    products = Product.price_custom
+    products = Product.objects.all()
     fabrics = Fabric.objects.all()
     custom_product_form = CustomProductForm()
     template = 'custom_made/custom_made.html'
