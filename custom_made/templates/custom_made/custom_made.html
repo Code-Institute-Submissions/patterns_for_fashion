@@ -27,7 +27,7 @@
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label px-2 w-auto">Garment Name</legend>
                     {% for product in products %}
-                        <span class="lead mb-0 text-left font-weight-bold">{{ product.name}}</span>
+                    <span class="lead mb-0 text-left font-weight-bold">{{ product.name }}</span>
                     {% endfor %}
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
@@ -36,12 +36,30 @@
                     <span class="lead mb-0 text-left font-weight-bold">€ {{ product.price_custom }}</span>
                     {% endfor %}
                 </fieldset>
-                <p class="text-muted">Please fill out the measurements fields as described below each field</p>
+                <fieldset class="rounded px-3 mb-5">
+                    <!-- Practically comment these lines out and lets do a simple div with <img> -->
+                    <!-- <label for="fabrics">Choose a fabric:</label>
+                                            {% for fabric in fabrics %}
+                                                <select id="fabrics" name="fabrics" form="fabricform">
+                                                    <option value="{{ MEDIA_URL}}{{ fabric.image }}">
+                                                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="fabric image">
+                                                    </option>
+                                                </select>
+                                            {% endfor %} -->
+                    <!-- so commenting out all of the above lines down to here -->
+                    <!-- Then use just this: I'm inserting them as comment but you can uncomment these lines down below-->
+                    {% for fabric in fabrics %}
+                    <div>
+                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="{{ fabric.name }}">
+                    </div>
+                    {% endfor %}
+                </fieldset>
                 <form action="{% url 'custom_made_view' %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label px-2 w-auto">Measurements Fields and Instructions</legend>
+                        <p class="text-muted">Please fill out the measurements fields as described below each field</p>
                         <p>First attach an elastic band horizontally at the waist. All lengths are measured to the bottom and from the bottom of the elastic band.</p>
                         {{ custom_product_form.shoulder_width | as_crispy_field }}
                         <p>Measure from the neck to the tip of the shoulder.</p>
@@ -63,24 +81,45 @@
                         <p>Measure the chest circumference smoothly over the thickest part of the bust</p>
                         {{ custom_product_form.extra_info | as_crispy_field }}
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
-                        <!-- Practically comment these lines out and lets do a simple div with <img> -->
-                        <!-- <label for="fabrics">Choose a fabric:</label>
-                            {% for fabric in fabrics %}
-                                <select id="fabrics" name="fabrics" form="fabricform">
-                                    <option value="{{ MEDIA_URL}}{{ fabric.image }}">
-                                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="fabric image">
-                                    </option>
-                                </select>
-                            {% endfor %} -->
-                            <!-- so commenting out all of the above lines down to here -->
-                            <!-- Then use just this: I'm inserting them as comment but you can uncomment these lines down below-->
-                            {% for fabric in fabrics %}
-                            <div>
-                                <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="{{ fabric.name }}">
+
+                    <div class="form-row">
+                        <div class="col-12">
+                            <p class="mt-3"><strong>Quantity</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-black rounded-0" data-item_id="{{ product.id }}"
+                                            id="decrement-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input type="number" name="quantity" value="1" min="1" max="99" class="form-control qty_input"
+                                        data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-black rounded-0" data-item_id="{{ product.id }}"
+                                            id="increment-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            {% endfor %}
-                    </fieldset>
+                        </div>
+                    </div>
+                        
+                    <div class="col-12 mt-5">
+                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mb-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mb-5" value="Add to Bag">
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
             </div>
         </div>
@@ -88,5 +127,6 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}

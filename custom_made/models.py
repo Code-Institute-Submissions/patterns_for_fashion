@@ -21,4 +21,4 @@ class CustomProduct(models.Model):
     extra_info = models.TextField(max_length=200)
 
     def __str__(self):
-        return self.user
+        return self.user.username
