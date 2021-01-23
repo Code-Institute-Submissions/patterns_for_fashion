@@ -25,36 +25,43 @@
             </div>
             <div class="col-12 col-lg-6">
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label px-2 w-auto">Garment Name</legend>
-                    {% for product in products %}
-                    <span class="lead mb-0 text-left font-weight-bold">{{ product.name }}</span>
-                    {% endfor %}
+                    <legend class="mt-1 mb-0">This is the garment you have selected</legend>
+                    <p class="mt-1 mb-0">Garment's Name: <strong>{{ product.name }}</strong></p>
+                    <p class="mt-1 mb-0">Custom Made Price: <strong>{{ product.price_custom }}</strong></p>
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label px-2 w-auto">Custom Made Price</legend>
-                    {% for product in products %}
-                    <span class="lead mb-0 text-left font-weight-bold">€ {{ product.price_custom }}</span>
-                    {% endfor %}
-                </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <!-- Practically comment these lines out and lets do a simple div with <img> -->
-                    <!-- <label for="fabrics">Choose a fabric:</label>
-                                            {% for fabric in fabrics %}
-                                                <select id="fabrics" name="fabrics" form="fabricform">
-                                                    <option value="{{ MEDIA_URL}}{{ fabric.image }}">
-                                                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="fabric image">
-                                                    </option>
-                                                </select>
-                                            {% endfor %} -->
-                    <!-- so commenting out all of the above lines down to here -->
-                    <!-- Then use just this: I'm inserting them as comment but you can uncomment these lines down below-->
-                    {% for fabric in fabrics %}
-                    <div>
-                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="{{ fabric.name }}">
+                    <legend class="mt-1 mb-0">Please select a fabric</legend>
+                    <div class="select-sim" id="select-fabric">
+                        <div class="options">
+                            <div class="option">
+                                <input type="radio" name="fabric" value="" id="fabric-" checked />
+                                <label for="fabric-">
+                                    Select a fabric
+                                </label>
+                            </div>
+                            <div class="option">
+                                {% for fabric in fabrics %}
+                                <input type="radio" name="fabric" value="fabric" id="fabric" />
+                                <label for="fabric">
+                                    <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="fabric image">
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
-                    {% endfor %}
+                    <!--<label for="fabrics">Choose a fabric:</label>
+                                    <select id="fabrics" name="fabrics" form="fabricform">
+                                        <option value="{{ MEDIA_URL}}{{ fabric.image }}">
+                                            <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="fabric image">
+                                        </option>
+                                    </select>-->
+                    <!--{% for fabric in fabrics %}
+                                    <div>
+                                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="{{ fabric.name }}">
+                                    </div>
+                                    {% endfor %}-->
                 </fieldset>
-                <form action="{% url 'custom_made_view' %}" method="POST" id="custom-made-form">
+                <form action="{% url 'custom_made_view' product.id %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <fieldset class="rounded px-3 mb-5">
