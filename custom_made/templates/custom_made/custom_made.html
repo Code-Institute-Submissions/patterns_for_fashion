@@ -27,39 +27,22 @@
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="mt-1 mb-0">This is the garment you have selected</legend>
                     <p class="mt-1 mb-0">Garment's Name: <strong>{{ product.name }}</strong></p>
-                    <p class="mt-1 mb-0">Custom Made Price: <strong>{{ product.price_custom }}</strong></p>
+                    <p class="mt-1 mb-0">Custom Made Price: <strong>€ {{ product.price_custom }}</strong></p>
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="mt-1 mb-0">Please select a fabric</legend>
                     <div class="select-sim" id="select-fabric">
                         <div class="options">
                             <div class="option">
-                                <input type="radio" name="fabric" value="" id="fabric-" checked />
-                                <label for="fabric-">
-                                    Select a fabric
-                                </label>
-                            </div>
-                            <div class="option">
+                                <input type="radio" name="fabric" value="fabric" id="fabric" checked/>
                                 {% for fabric in fabrics %}
-                                <input type="radio" name="fabric" value="fabric" id="fabric" />
-                                <label for="fabric">
-                                    <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="fabric image">
-                                </label>
+                                    <label for="fabric">
+                                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="{{ fabric.name }}"> {{ fabric.name }}
+                                    </label>
                                 {% endfor %}
                             </div>
                         </div>
                     </div>
-                    <!--<label for="fabrics">Choose a fabric:</label>
-                                    <select id="fabrics" name="fabrics" form="fabricform">
-                                        <option value="{{ MEDIA_URL}}{{ fabric.image }}">
-                                            <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="fabric image">
-                                        </option>
-                                    </select>-->
-                    <!--{% for fabric in fabrics %}
-                                    <div>
-                                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="{{ fabric.name }}">
-                                    </div>
-                                    {% endfor %}-->
                 </fieldset>
                 <form action="{% url 'custom_made_view' product.id %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
@@ -137,3 +120,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
+
+<script type="text/javascript">
+    
+</script>
