@@ -29,29 +29,19 @@
                     <p class="mt-1 mb-0">Garment's Name: <strong>{{ product.name }}</strong></p>
                     <p class="mt-1 mb-0">Custom Made Price: <strong>€ {{ product.price_custom }}</strong></p>
                 </fieldset>
-                <form method="POST">
-                    {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="mt-1 mb-0">Please select a fabric</legend>
-                        <div class="select-sim" id="select-fabric">
-                            <div class="options">
-                                <div class="option">
-                                    <input type="radio" name="fabric" value="" id="fabric-" checked />
-                                        <label for="fabric-"> Select an option
-                                    </label>
-                                </div>
-                                {% for fabric in fabrics %}
-                                <div class="option">
-                                    <input type="radio" name="fabric" value="fabric" id="fabric" />
-                                    <label for="fabric">
-                                        <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}"> {{ fabric.name }}
-                                    </label>
-                                </div>
-                                {% endfor %}
-                            </div>
+                <fieldset class="rounded px-3 mb-5">
+                    <legend class="mt-1 mb-0">Please select a fabric below.</legend>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Select Fabric</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            {% for fabric in fabrics %}
+                            <a href="#">
+                                <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}"> {{ fabric.name }}
+                            </a>
+                            {% endfor %}
                         </div>
-                    </fieldset>
-                </form>
+                    </div>
+                </fieldset>
                 <form action="{% url 'custom_made_view' product.id %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -127,8 +117,28 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-{% endblock %}
 
 <script type="text/javascript">
-    
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 </script>
+
+{% endblock %}
+

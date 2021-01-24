@@ -212,6 +212,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ## Images
 ## Code
 [Dropdown select images](https://stackoverflow.com/questions/2965971/how-to-add-images-in-select-list/2966006#2966006)
+[w3schools](https://www.w3schools.com/howto/howto_js_dropdown.asp)
 ## Tutor Support
 Stephen for helping me rendering the fields in the measurements template
 ## Mentor

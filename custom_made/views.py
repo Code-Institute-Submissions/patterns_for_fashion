@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404
-
 from custom_made.forms import CustomProductForm
 from fabrics.models import Fabric
 from products.models import Product
