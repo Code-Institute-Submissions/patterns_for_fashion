@@ -29,21 +29,29 @@
                     <p class="mt-1 mb-0">Garment's Name: <strong>{{ product.name }}</strong></p>
                     <p class="mt-1 mb-0">Custom Made Price: <strong>€ {{ product.price_custom }}</strong></p>
                 </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="mt-1 mb-0">Please select a fabric</legend>
-                    <div class="select-sim" id="select-fabric">
-                        <div class="options">
-                            <div class="option">
-                                <input type="radio" name="fabric" value="fabric" id="fabric" checked/>
-                                {% for fabric in fabrics %}
-                                    <label for="fabric">
-                                        <img src="{{ MEDIA_URL}}{{ fabric.image }}" alt="{{ fabric.name }}"> {{ fabric.name }}
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="rounded px-3 mb-5">
+                        <legend class="mt-1 mb-0">Please select a fabric</legend>
+                        <div class="select-sim" id="select-fabric">
+                            <div class="options">
+                                <div class="option">
+                                    <input type="radio" name="fabric" value="" id="fabric-" checked />
+                                        <label for="fabric-"> Select an option
                                     </label>
+                                </div>
+                                {% for fabric in fabrics %}
+                                <div class="option">
+                                    <input type="radio" name="fabric" value="fabric" id="fabric" />
+                                    <label for="fabric">
+                                        <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}"> {{ fabric.name }}
+                                    </label>
+                                </div>
                                 {% endfor %}
                             </div>
                         </div>
-                    </div>
-                </fieldset>
+                    </fieldset>
+                </form>
                 <form action="{% url 'custom_made_view' product.id %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -72,9 +80,9 @@
                         {{ custom_product_form.extra_info | as_crispy_field }}
                     </fieldset>
 
-                    <div class="form-row">
-                        <div class="col-12">
-                            <p class="mt-3"><strong>Quantity</strong></p>
+                    <div class="col-12 mt-5 form-row">
+                        <div class="col-12 mt-5">
+                            <p><strong>Quantity</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">

@@ -8,7 +8,7 @@ form fieldset p {
 .select-sim {
   width:300px;
   height:300px;
-  line-height:30px;
+  line-height:22px;
   vertical-align:middle;
   position:relative;
   background:white;
@@ -18,13 +18,12 @@ form fieldset p {
 
 .select-sim::after {
   content:"▼";
-  font-size:1em;
+  font-size:0.5em;
   font-family:arial;
   position:absolute;
-  top:15px;
+  top:50%;
   right:5px;
   transform:translate(0, -50%);
-  color: #acabab;
 }
 
 .select-sim:hover::after {
@@ -46,7 +45,7 @@ form fieldset p {
   top:-1px;
   left:-1px;
   width:100%;
-  height:500px;
+  height:600px;
   overflow-y:scroll;
 }
 
@@ -55,9 +54,8 @@ form fieldset p {
 }
 
 .select-sim:hover .options .option {
-  height:30px;
+  height:300px;
   overflow:visible;
-  text-align: center;
 }
 
 .select-sim .options .option img {
@@ -91,5 +89,6 @@ form fieldset p {
 }
 
 .select-sim:hover .options .option input:checked + label {
-  background:#acabab;
+  background:#b30606;
+  color: #ccc;
 }
