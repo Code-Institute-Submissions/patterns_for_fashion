@@ -30,7 +30,7 @@
                     <p class="mt-1 mb-0">Custom Made Price: <strong>€ {{ product.price_custom }}</strong></p>
                 </fieldset>
                 
-                <form class="form" action="{% url 'custom_made_view' product.id %}" method="POST" id="custom-made-form">
+                <form class="form" action="{% url 'add_to_bag_custom_made' product.id %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     {{ form|crispy }}
                     {% with product.select_fabric as f %}

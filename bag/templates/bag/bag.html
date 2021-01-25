@@ -79,6 +79,9 @@
                                                     {% if item.product.has_sizes %}
                                                         <input type="hidden" name="product_size" value="{{ item.size }}">
                                                     {% endif %}
+                                                    {% if item.product.select_fabric %}
+                                                        <input type="hidden" name="product_fabric" value="{{ item.fabric }}">
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </form>

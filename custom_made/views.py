@@ -10,8 +10,6 @@ def custom_made_view(request, product_id):
     custom_product_form = CustomProductForm()
     template = 'custom_made/custom_made.html'
     context = {
-        'select_fabric': select_fabric,
-        'fabric': 'fabric',
         'product': product,
         'fabrics': fabrics,
         'custom_product_form': custom_product_form

@@ -27,7 +27,7 @@ def bag_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             fabric = get_object_or_404(Fabric, pk=item_id)
-            for size, quantity in item_data['items_by_size'].items():
+            for size, fabric, quantity in item_data['items_by_size']['items_by_fabric'].items():
                 total += quantity * product.price
                 product_count += quantity
                 bag_items.append({
@@ -36,6 +36,7 @@ def bag_contents(request):
                     'quantity': quantity,
                     'product': product,
                     'size': size,
+                    'fabric': fabric,
                 })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
