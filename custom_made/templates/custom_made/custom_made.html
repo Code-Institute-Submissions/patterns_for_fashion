@@ -29,22 +29,26 @@
                     <p class="mt-1 mb-0">Garment's Name: <strong>{{ product.name }}</strong></p>
                     <p class="mt-1 mb-0">Custom Made Price: <strong>€ {{ product.price_custom }}</strong></p>
                 </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <legend class="mt-1 mb-0">Please select a fabric below.</legend>
-                    <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Select Fabric</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            {% for fabric in fabrics %}
-                            <a href="#">
-                                <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}"> {{ fabric.name }}
-                            </a>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </fieldset>
-                <form action="{% url 'custom_made_view' product.id %}" method="POST" id="custom-made-form">
+                
+                <form class="form" action="{% url 'custom_made_view' product.id %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     {{ form|crispy }}
+                    {% with product.select_fabric as f %}
+                    <fieldset class="rounded px-3 mb-5">
+                        {% if f %}
+                        <legend class="mt-1 mb-0">Please select a fabric below.</legend>
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">Select Fabric</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                {% for fabric in fabrics %}
+                                <a href="#">
+                                    <img src="{{ fabric.image.url }}" alt="{{ fabric.name }}"> {{ fabric.name }}
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    </fieldset>
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label px-2 w-auto">Measurements Fields and Instructions</legend>
                         <p class="text-muted">Please fill out the measurements fields as described below each field</p>
@@ -98,7 +102,7 @@
                         </div>
                     </div>
                         
-                    <div class="col-12 mt-5">
+                    <div class="col{% if f %}-12 mt-5{% endif %}">
                         <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mb-5">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
@@ -108,6 +112,7 @@
                         <input type="submit" class="btn btn-black rounded-0 text-uppercase mb-5" value="Add to Bag">
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    {% endwith %}
                 </form>
             </div>
         </div>

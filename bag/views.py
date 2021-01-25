@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 
 from products.models import Product
-from fabrics.models import Fabric
 
 # Create your views here.
 
@@ -17,12 +16,8 @@ def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
     product = get_object_or_404(Product, pk=item_id)
-    fabric = get_object_or_404(Fabric, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    fabric = None
-    if 'fabric' in request.POST:
-        fabric = request.POST['fabric']
     size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
@@ -55,11 +50,7 @@ def adjust_bag(request, item_id):
     """ Adjust the quantity of the specified product to the specified amount """
 
     product = get_object_or_404(Product, pk=item_id)
-    fabric = get_object_or_404(Fabric, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    fabric = None
-    if 'fabric' in request.POST:
-        fabric = request.POST['fabric']
     size = None
     if 'product_size' in request.POST:
         size = request.POST['product_size']
@@ -91,10 +82,6 @@ def remove_from_bag(request, item_id):
 
     try:
         product = get_object_or_404(Product, pk=item_id)
-        fabric = get_object_or_404(Fabric, pk=item_id)
-        fabric = None
-        if 'fabric' in request.POST:
-            fabric = request.POST['fabric']
         size = None
         if 'product_size' in request.POST:
             size = request.POST['product_size']
