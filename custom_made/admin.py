@@ -5,7 +5,6 @@ from .models import CustomProduct
 
 
 class CustomProductAdmin(admin.ModelAdmin):
-    readonly_fields = ('price_custom',)
     fields = ('shoulder_width', 'chest_width',
               'bust_height', 'bust_length', 'hip_circ1',
               'hip_circ2', 'back_width', 'back_length',

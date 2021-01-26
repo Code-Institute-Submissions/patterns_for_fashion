@@ -6,7 +6,6 @@ class CustomProductForm(forms.ModelForm):
     class Meta:
         model = CustomProduct
         fabrics = ('fabrics',)
-        readonly_fields = ('price_custom', 'name',)
         fields = ('shoulder_width', 'chest_width',
                   'bust_height', 'bust_length', 'hip_circ1',
                   'hip_circ2', 'back_width', 'back_length',
