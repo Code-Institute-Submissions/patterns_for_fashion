@@ -33,9 +33,7 @@
                 <form class="form" action="{% url 'custom_made_view' product.id %}" method="POST" id="custom-made-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    {% with product.select_fabric as f %}
                     <fieldset class="rounded px-3 mb-5">
-                        {% if f %}
                         <legend class="mt-1 mb-0">Please select a fabric below.</legend>
                         <div class="dropdown">
                             <button onclick="myFunction()" class="dropbtn">Select Fabric</button>
@@ -47,7 +45,6 @@
                                 {% endfor %}
                             </div>
                         </div>
-                        {% endif %}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label px-2 w-auto">Measurements Fields and Instructions</legend>
@@ -102,7 +99,7 @@
                         </div>
                     </div>
                         
-                    <div class="col{% if f %}-12 mt-5{% endif %}">
+                    <div class="col-12 mt-5">
                         <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mb-5">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
@@ -112,7 +109,6 @@
                         <input type="submit" class="btn btn-black rounded-0 text-uppercase mb-5" value="Add to Bag">
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    {% endwith %}
                 </form>
             </div>
         </div>
@@ -120,30 +116,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
-
-<script type="text/javascript">
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
+    <script type="text/javascript" src="{% static 'custom_made/js/fabricsdropdown.js' %}"></script>
 {% endblock %}
 
