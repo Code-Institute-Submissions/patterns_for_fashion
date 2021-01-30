@@ -12,7 +12,7 @@ def custom_made_view(request, product_id):
     context = {
         'product': product,
         'fabrics': fabrics,
-        'custom_product_form': custom_product_form
+        'custom_product_form': custom_product_form,
     }
 
     return render(request, template, context)
