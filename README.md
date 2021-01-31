@@ -215,6 +215,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -   [JavaScript for update year in the footer copyright section.](https://stackoverflow.com/questions/4562587/shortest-way-to-print-current-year-in-a-website)
 -   [Summary tag in the info card on index.html](https://www.w3schools.com/tags/tag_summary.asp)
 -   [Read More functionality from info card on index.html](https://www.w3schools.com/howto/howto_js_read_more.asp)
+
 ## Tutor Support
 Stephen for helping me rendering the fields in the measurements template
 ## Mentor

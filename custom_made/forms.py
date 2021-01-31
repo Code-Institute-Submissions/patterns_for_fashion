@@ -32,7 +32,7 @@ class CustomProductForm(forms.ModelForm):
 
         self.fields['shoulder_width'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if field != 'shoulder_width':
+            if field != 'country':
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:

@@ -48,26 +48,53 @@
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label px-2 w-auto">Measurements Fields and Instructions</legend>
-                        <p class="text-muted">Please fill out the measurements fields as described below each field</p>
+                        <p class="text-muted">Please fill out the measurements fields as described below.</p>
                         <p>First attach an elastic band horizontally at the waist. All lengths are measured to the bottom and from the bottom of the elastic band.</p>
+                        <details>
+                            <summary>Shoulder Width</summary>
+                            <p><strong> Shoulder Width</strong>: Measure from the neck line to the tip of the shoulder.</p>
+                        </details>
                         {{ custom_product_form.shoulder_width | as_crispy_field }}
-                        <p><strong> Shoulder Width</strong>: Measure from the neck to the tip of the shoulder.</p>
+                        <details>
+                            <summary>Chest Width</summary>
+                            <p> <strong> Chest Width</strong>: 5 cm below the neck hole, measure the chest width to an imaginary armhole line.</p>
+                        </details>
                         {{ custom_product_form.chest_width | as_crispy_field }}
-                        <p> <strong> Chest Width</strong>: 5 cm below the neck hole, measure the chest width to an imaginary armhole line.</p>
+                        <details>
+                            <summary>Bust Height</summary>
+                            <p><strong> Bust Height</strong>: Measure from the neck pit to the height of bust point.</p>
+                        </details>
                         {{ custom_product_form.bust_height | as_crispy_field }}
-                        <p><strong> Bust Height</strong>: Measure from the neck pit to the height of bust point.</p>
+                        <details>
+                            <summary>Bust Length</summary>
+                            <p><strong> Bust Length</strong>: Measure from the neck pit to the bottom of the waistband, with an inch over space on the sternum.</p>
+                        </details>
                         {{ custom_product_form.bust_length | as_crispy_field }}
-                        <p><strong> Bust Length</strong>: Measure from the neck pit to the bottom of the waistband, with an inch over space on the sternum.</p>
+                        <details>
+                            <summary>Hip circumference 1</summary>
+                            <p><strong> Hip circumference 1</strong>: Measure the hip circumference at 10cm below the waist, not too tight.</p>
+                        </details>
                         {{ custom_product_form.hip_circ1 | as_crispy_field }}
-                        <p><strong> Hip circumference 1</strong>: Measure the hip circumference at 10cm below the waist, not too tight.</p>
+                        <details>
+                            <summary>Hip circumference 2</summary>
+                            <p><strong> Hip circumference 2</strong>: Measure the hip circumference at 22cm below the waist across the thickest part of the hip.</p>
+                        </details>
                         {{ custom_product_form.hip_circ2 | as_crispy_field }}
-                        <p><strong> Hip circumference 2</strong>: Measure the hip circumference at 22cm below the waist across the thickest part of the hip.</p>
+                        <details>
+                            <summary>Back Width</summary>
+                            <p><strong> Back Width</strong>: Measure 8cm below the nape of the neck, the width to an imaginary armhole line.</p>
+                        </details>
                         {{ custom_product_form.back_width | as_crispy_field }}
-                        <p><strong> Back Width</strong>: Measure 8cm below the nape of the neck, the width to an imaginary armhole line.</p>
+                        <details>
+                            <summary>Back Width</summary>
+                            <p><strong> Back Length</strong>: Measure from the point of the neck to the bottom of the waistband.</p>
+                        </details>
                         {{ custom_product_form.back_length | as_crispy_field }}
-                        <p><strong> Back Length</strong>: Measure from the point of the neck to the bottom of the waistband.</p>
+                        <details>
+                            <summary>Chest Circumference</summary>
+                            <p><strong> Chest Circumference</strong>: Measure the chest circumference smoothly over the thickest part of the bust</p>
+                        </details>
                         {{ custom_product_form.chest_circ | as_crispy_field }}
-                        <p><strong> Chest Circumference</strong>: Measure the chest circumference smoothly over the thickest part of the bust</p>
                         {{ custom_product_form.extra_info | as_crispy_field }}
                     </fieldset>
 
