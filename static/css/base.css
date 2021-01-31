@@ -35,6 +35,12 @@ body {
     display: none;
 }
 
+footer {
+    text-align: center;
+    max-height: 100px;
+    max-width: 100%;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;

@@ -1,3 +1,5 @@
+// Script for read more section in teh info card from index.html
+
 function myFunction() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
@@ -13,3 +15,7 @@ function myFunction() {
     moreText.style.display = "inline";
   }
 }
+
+// Script for date picker from footer index.html
+
+document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
