@@ -77,7 +77,7 @@ footer li a i:hover {
 }
 
 .header-container {
-    padding-top: 164px;
+    padding-top: 150px;
 }
 
 .main-logo-link {
@@ -327,13 +327,13 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 150px;
     }
 }
 
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 60px;
     }
 
     body {
@@ -352,7 +352,7 @@ input[name='q']::placeholder {
 
 @media only screen and (max-width: 1366px) and (min-width: 1024px) {
     .card {
-        font-size: small;
+        font-size: 11px;
     }
     
     .jumbotron {
@@ -362,6 +362,6 @@ input[name='q']::placeholder {
 
 @media (max-width: 360px) {
     body {
-        font-size: 10px;
+        font-size: 8px;
     }
 }
