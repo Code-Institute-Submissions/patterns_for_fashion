@@ -6,6 +6,7 @@ class CustomProductForm(forms.ModelForm):
     class Meta:
         model = CustomProduct
         fabrics = ('fabrics',)
+        select_fabric = 'select_fabric'
         fields = ('shoulder_width', 'chest_width',
                   'bust_height', 'bust_length', 'hip_circ1',
                   'hip_circ2', 'back_width', 'back_length',

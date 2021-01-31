@@ -20,7 +20,7 @@ body {
 .card {
     border-radius: 0;
     font-size: large;
-    min-height: 270px;
+    min-height: 290px;
 }
 
 .icons-index {
@@ -37,8 +37,28 @@ body {
 
 footer {
     text-align: center;
-    max-height: 100px;
-    max-width: 100%;
+    padding-top: 40px;
+}
+
+footer li {
+    display: inline-flex;
+}
+
+footer li a i {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: black;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+footer li a i:hover {
+    color: #b30606;
 }
 
 /* from Bulma */
@@ -83,6 +103,7 @@ footer {
     background: white;
     color: black !important;
     border: 1px solid black;
+    border-radius: 0;
 }
 
 .btn-outline-black:hover,
