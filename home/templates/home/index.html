@@ -19,7 +19,7 @@
                             <div class="carousel-caption">
                                 <div class="row">
                                     <div class="col-12 col-md-3">
-                                        <div class="my-4">
+                                        <div class="my-md-5 my-sm-0">
                                             <h4>
                                                 <a href="{% url 'products' %}" class="buy-button btn btn-lg rounded-0">Checkout Our Garments</a>
                                             </h4>
@@ -33,7 +33,7 @@
                             <div class="carousel-caption">
                                 <div class="row">
                                     <div class="col-12 col-md-3">
-                                        <div class="my-4">
+                                        <div class="my-md-5 my-sm-0">
                                             <h4>
                                                 <a href="{% url 'products' %}" class="buy-button btn btn-lg rounded-0">Checkout Our Garments</a>
                                             </h4>
@@ -47,7 +47,7 @@
                             <div class="carousel-caption">
                                 <div class="row">
                                     <div class="col-12 col-md-3">
-                                        <div class="my-4">
+                                        <div class="my-md-5 my-sm-0">
                                             <h4>
                                                 <a href="{% url 'products' %}" class="buy-button btn btn-lg rounded-0">Checkout Our Garments</a>
                                             </h4>
@@ -77,37 +77,34 @@
                         <div class="card-body">
                             <i class="fas fa-users icons-index d-flex align-items-center justify-content-center"></i>
                             <hr class="hr-index">
-                            <p class="card-text">
+                            <p class="card-text ml-md-5 mr-md-5">
                                 Our team is formed by skilled professional pattern-makers and seamstresses specialised
                                 in creating dresses and shirts on different sizes and body proportions. For creating the
                                 patterns, our professionals are using a very methodical technique named "Danckaerts".
                                 <span id="dots">...</span><span id="more">
                                     Dankckaerts technique is a very old and well thought system for creating clothing patterns
                                     and was developed in 1890 by the Danckaerts family: Mrs Danckaerts, tailor and her husband
-                                    Mr Danckaerts, engineer.
-                                    Together they built the Danckaerts Fashion School which grew constantly
-                                    with every new generation of students and teachers.
-                                    Their notable success was due to the very accurate
+                                    Mr Danckaerts, engineer. Together they built the Danckaerts Fashion School which grew constantly
+                                    with every new generation of students and teachers. Their notable success was due to the very accurate
                                     formulas and methodology they developed while studying the human body proportions which can
-                                    be found
-                                    in so many sizes and shapes.
+                                    be found in so many sizes and shapes.
                                 </span>
                             </p>
-                            <button class="btn-outline-black" onclick="myFunction()" id="myBtn">Read more</button>
+                            <button class="btn-outline-black ml-md-5 mr-md-5" onclick="myFunction()" id="myBtn">Read more</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
-                    <h3 class="jumbotron mt-5 mb-0">About Our Collection of Fabrics</h3>
+                    <h3 class="jumbotron mt-5 mb-0">About Our Fabrics' Collection</h3>
                     <div class="card bg-light shadow-lg mb-5">
                         <div class="card-body">
                             <i class="fas fa-leaf icons-index d-flex align-items-center justify-content-center"></i>
                             <hr class="hr-index">
-                            <p class="card-text">
-                                Patterns 4 Fashion uses for the garments production a wide selection of certified
+                            <p class="card-text ml-md-5 mr-md-5">
+                                Patterns 4 Fashion uses for the production of the garments a wide selection of certified
                                 ecological fabrics manufactured and processed in a sustainable way.
                             </p>
-                            <a target="_blank" href="https://www.ecologicaltextiles.nl/" class="btn btn-outline-black">Check It Out</a>
+                            <a target="_blank" href="https://www.ecologicaltextiles.nl/" class="btn btn-outline-black ml-md-5 mr-md-5">Check It Out</a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +116,7 @@
                             <hr class="hr-index">
                             <div class="card-text">
                                 <details>
-                                    <summary> You can choose a standard size</summary>
+                                    <summary class="ml-md-5 mr-md-5"> You can choose a standard size</summary>
                                     <p></p>
                                     <ul>
                                         <li>
@@ -128,8 +125,10 @@
                                         </li>
                                     </ul>
                                 </details>
+                                <p></p>
+                                <p class="ml-5 mr-5">Or</p>
                                 <details>
-                                    <summary>Or you can choose a custom made garment</summary>
+                                    <summary class="ml-md-5 mr-md-5">You can choose a custom made garment</summary>
                                     <p></p>
                                     <ul>
                                         <li>
@@ -156,7 +155,21 @@
             </div>
         <footer class="container-fluid bg-white">
             <div class="row">
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
+                    <address>
+                        <strong>Patterns 4 Fashion</strong>
+                        <br>Church St Hay Market <br>
+                         Tullow, County Carlow <br> N/A, Ireland<br>
+                        <abbr title="Phone">P:</abbr> +353 (059)9135588
+                    </address>
+                
+                    <address>
+                        <strong>Need more information? Drop us a line.</strong><br>
+                        <a href="mailto:#">patterns4fashion@mail.com</a>
+                    </address>
+                </div>
+                
+                <div class="col-12 col-lg-6">
                     <h5>Social Media</h5>
                     <ul>
                         <li>
@@ -172,21 +185,8 @@
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <p class="copyright">Copyright &copy; Patterns 4 Fashion <span id="copyright"></span></p>
+                    <p class="copyright">Copyright &copy; <strong>Patterns 4 Fashion</strong> <span id="copyright"></span></p>
                     <p>Created for Educational Purposes Only</p>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <address>
-                        <strong>Patterns 4 Fashion</strong>
-                        <br>Church St Hay Market, Tullow, County Carlow, N/A, Ireland<br>
-                        <abbr title="Phone">+353</abbr> (059)9135588
-                    </address>
-                
-                    <address>
-                        <a href="mailto:#">patterns4fashion@mail.com</a>
-                    </address>
                 </div>
             </div>
         </footer>
