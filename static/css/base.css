@@ -340,6 +340,10 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 
+    .jumbotron {
+        font-size: large;
+    }
+
     .buy-button {
         font-size: small;
         min-width: 170px;
@@ -353,5 +357,11 @@ input[name='q']::placeholder {
     
     .jumbotron {
         font-size: large;
+    }
+}
+
+@media (max-width: 360px) {
+    body {
+        font-size: 10px;
     }
 }
