@@ -20,6 +20,7 @@ body {
 .card {
     border-radius: 0;
     font-size: large;
+    min-height: 250px;
 }
 
 .icons-index {
@@ -28,6 +29,10 @@ body {
 
 .hr-index {
     width: 220px;
+}
+
+#more {
+    display: none;
 }
 
 /* from Bulma */

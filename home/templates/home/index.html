@@ -10,8 +10,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row h-80">
+        <div class="row no-gutters">
             <div class="col-12">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -82,18 +81,18 @@
                             Our team is formed by skilled professional pattern-makers and seamstresses specialised
                             in creating dresses and shirts on different sizes and body proportions. For creating the
                             patterns, our professionals are using a very methodical technique named "Danckaerts".
-                        <hr>
+                            <span id="dots">...</span><span id="more">
                             Dankckaerts technique is a very old and well thought system for creating clothing patterns
                             and was developed in 1890 by the Danckaerts family: Mrs Danckaerts, tailor and her husband
                             Mr Danckaerts, engineer. 
-                        <hr>
                             Together they built the Danckaerts Fashion School which grew constantly
                             with every new generation of students and teachers. 
-                        <hr>
                             Their notable success was due to the very accurate
                             formulas and methodology they developed while studying the human body proportions which can be found
                             in so many sizes and shapes.
+                            </span>
                         </p>
+                        <button onclick="myFunction()" id="myBtn">Read more</button>
                     </div>
                 </div>
             </div>
@@ -104,18 +103,60 @@
                         <i class="fab fa-whmcs icons-index d-flex align-items-center justify-content-center"></i>
                         <hr class="hr-index">
                         <div class="card-text">
-                            <ul>
-                                <li>
-                                    <p>You can choose a standard size</p>
-                                </li>
-                                <li>
-                                    <p>Or you can choose a custom made garment</p>
-                                </li>
-                            </ul>
+                            <details>
+                                <summary> You can choose a standard size</summary>
+                                <p></p>
+                                <ul>
+                                    <li>
+                                        <p>There are standard sizes from xs to xl available for each garment of our collection.</p>
+                                    </li>
+                                </ul>
+                            </details>
+                            <details>
+                                <summary>Or you can choose a custom made garment</summary>
+                                <p></p>
+                                <ul>
+                                    <li>
+                                        <p>You select the desired garment from our collection.</p>
+                                    </li>
+                                    <li>
+                                        <p>Select Custom Made option</p>
+                                    </li>
+                                    <li>
+                                        <p>Select your favourite fabric</p>
+                                    </li>
+                                    <li>
+                                        <p>Add your measurements value to the required fields</p>
+                                    </li>
+                                    <li>
+                                        <p>And add to bag.</p>
+                                    </li>
+                                </ul>
+                            </details>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
 {% endblock %}
