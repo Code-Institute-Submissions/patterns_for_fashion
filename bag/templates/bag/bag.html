@@ -89,6 +89,62 @@
                                     </td>
                                 </tr>
                             {% endfor %}
+
+                            {% for item in bag_items_custom %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        {% if item.product.image %}
+                                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-fluid rounded">
+                                        {% else %}
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" class="img-fluid rounded">
+                                        {% endif %}
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                        <p class="my-0"><strong>Fabric: </strong>{% if item.product.custom_made %}{{ item.fabric|upper }}{% else %}N/A{% endif %}</p>
+                                        <p class="my-0 small text-muted">SKU {{ item.product.sku|upper }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">€ {{ item.product.price_custom }}</p>
+                                    </td>
+                                    <td class="py-3 w-25s">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag_custom' item.item_id %}">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.item_id }}"
+                                                            id="decrement-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-minus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" class="form-control form-control-sm qty_input"
+                                                        data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.item_id }}"
+                                                            id="increment-qty_{{ item.item_id }}">
+                                                            <span>
+                                                                <i class="fas fa-plus fa-sm"></i>
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                    {% if item.product.custom_made %}
+                                                        <input type="hidden" name="product_size" value="{{ item.fabric }}">
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="update-link text-info"><small>Update</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_fabric="{{ item.fabric }}"><small>Remove</small></a>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">€ {{ item.product.price_custom | calc_subtotal:item.quantity }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Bag Total: € {{ total|floatformat:2 }}</strong></h6>
