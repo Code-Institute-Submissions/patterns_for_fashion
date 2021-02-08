@@ -1,11 +1,12 @@
 from django import forms
 from .models import CustomProduct
+from .models import Fabric
 
 
 class CustomProductForm(forms.ModelForm):
     class Meta:
         model = CustomProduct
-        fabrics = ('fabrics',)
+        fabrics = Fabric.objects.all()
         select_fabric = 'select_fabric'
         fields = ('shoulder_width', 'chest_width',
                   'bust_height', 'bust_length', 'hip_circ1',
@@ -33,11 +34,10 @@ class CustomProductForm(forms.ModelForm):
 
         self.fields['shoulder_width'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if field != 'country':
-                if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
-                else:
-                    placeholder = placeholders[field]
-                self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 custom-made-form-input'
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'custom_made-style-input'
             self.fields[field].label = False

@@ -1,11 +1,18 @@
+from products.models import Product
 from django.db import models
 from django.contrib.auth.models import User
+from fabrics.models import Fabric
 
 # Create your models here.
 
 
 class CustomProduct(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='users')
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='products')
+    fabric = models.ForeignKey(Fabric, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='fabrics')
     select_fabric = models.BooleanField(default=False, null=True, blank=True)
     shoulder_width = models.DecimalField(max_digits=6, decimal_places=2)
     chest_width = models.DecimalField(max_digits=6, decimal_places=2)

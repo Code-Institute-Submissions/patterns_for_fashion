@@ -5,6 +5,7 @@ from products.models import Product
 
 
 def custom_made_view(request, product_id):
+    """ A view to show the custom made product form """
     product = get_object_or_404(Product, pk=product_id)
     fabrics = Fabric.objects.all()
     custom_product_form = CustomProductForm()
@@ -13,6 +14,7 @@ def custom_made_view(request, product_id):
         'product': product,
         'fabrics': fabrics,
         'custom_product_form': custom_product_form,
+        'select_fabric': True,
     }
 
     return render(request, template, context)
