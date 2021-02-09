@@ -46,40 +46,6 @@ def add_to_bag(request, item_id):
     return redirect(redirect_url)
 
 
-def add_to_bag_custom(request, item_id):
-    """ Add a quantity of the specified custom made product to the shopping bag """
-
-    product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
-    fabric = None
-    if 'product_fabric' in request.POST:
-        fabric = request.POST['product_fabric']
-    bag = request.session.get('bag', {})
-
-    if fabric:
-        if item_id in list(bag.keys()):
-            if fabric in bag[item_id]['items_by_fabric'].keys():
-                bag[item_id]['items_by_fabric'][fabric] += quantity
-                messages.success(request, f'Updated fabric {fabric.upper()} {product.name} quantity to {bag[item_id]["items_by_fabric"][fabric]}')
-            else:
-                bag[item_id]['items_by_fabric'][fabric] = quantity
-                messages.success(request, f'Added fabric {fabric.upper()} {product.name} to your bag')
-        else:
-            bag[item_id] = {'items_by_fabric': {fabric: quantity}}
-            messages.success(request, f'Added fabric {fabric.upper()} {product.name} to your bag')
-    else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
-        else:
-            bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
-
-    request.session['bag'] = bag
-    return redirect(redirect_url)
-
-
 def adjust_bag(request, item_id):
     """ Adjust the quantity of the specified product to the specified amount """
 
@@ -111,37 +77,6 @@ def adjust_bag(request, item_id):
     return redirect(reverse('view_bag'))
 
 
-def adjust_bag_custom(request, item_id):
-    """ Adjust the quantity of the specified product to the specified amount """
-
-    product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
-    fabric = None
-    if 'product_fabric' in request.POST:
-        fabric = request.POST['product_fabric']
-    bag = request.session.get('bag', {})
-
-    if fabric:
-        if quantity > 0:
-            bag[item_id]['items_by_fabric'][fabric] = quantity
-            messages.success(request, f'Updated fabric {fabric.upper()} {product.name} quantity to {bag[item_id]["items_by_fabric"][fabric]}')
-        else:
-            del bag[item_id]['items_by_fabric'][fabric]
-            if not bag[item_id]['items_by_fabric']:
-                bag.pop(item_id)
-                messages.success(request, f'Removed fabric {fabric.upper()} {product.name} from your bag')
-    else:
-        if quantity > 0:
-            bag[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
-        else:
-            bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
-
-    request.session['bag'] = bag
-    return redirect(reverse('view_bag'))
-
-
 def remove_from_bag(request, item_id):
     """ Remove the item from the shopping bag """
 
@@ -157,33 +92,6 @@ def remove_from_bag(request, item_id):
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
                 messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
-        else:
-            bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
-
-        request.session['bag'] = bag
-        return HttpResponse(status=200)
-
-    except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
-        return HttpResponse(status=500)
-
-
-def remove_from_bag_custom(request, item_id):
-    """ Remove the item from the shopping bag """
-
-    try:
-        product = get_object_or_404(Product, pk=item_id)
-        fabric = None
-        if 'product_fabric' in request.POST:
-            fabric = request.POST['product_fabric']
-        bag = request.session.get('bag', {})
-
-        if fabric:
-            del bag[item_id]['items_by_fabric'][fabric]
-            if not bag[item_id]['items_by_fabric']:
-                bag.pop(item_id)
-                messages.success(request, f'Removed fabric {fabric.upper()} {product.name} from your bag')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
