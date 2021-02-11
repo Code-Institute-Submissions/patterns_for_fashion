@@ -72,6 +72,10 @@ address a:hover {
     color: #b30606;
 }
 
+.red-text {
+    color: #b30606;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
