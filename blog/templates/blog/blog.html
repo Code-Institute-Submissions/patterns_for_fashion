@@ -34,6 +34,9 @@
                     <div class="card-body">
                         <h2 class="card-title">{{ post.title }}</h2>
                         <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on }}</p>
+                        <a href="{% url 'post_detail' post.slug %}">
+                            <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.name }}" class="card-img-top w-50 mx-auto d-block">
+                        </a>
                         <p class="card-text">{{ post.content|slice:":200" }}</p>
                         <a href="{% url 'post_detail' post.slug %}" class="btn btn-outline-black">Read More &rarr;</a>
                     </div>
