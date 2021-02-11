@@ -217,6 +217,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -   [Read More functionality from info card on index.html](https://www.w3schools.com/howto/howto_js_read_more.asp)
 -   [Bootstrap Address Example](https://www.w3resource.com/twitter-bootstrap/examples/twitter-bootstrap-address-example.php)
 -   [Blog tutorial](https://djangocentral.com/building-a-blog-application-with-django/)
+-   [Creating comments-system with django for the blog](https://djangocentral.com/creating-comments-system-with-django/)
 ## Tutor Support
 Stephen for helping me rendering the fields in the measurements template
 ## Mentor

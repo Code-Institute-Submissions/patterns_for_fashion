@@ -9,12 +9,8 @@ class PostList(generic.ListView):
     template_name = 'blog/blog.html'
 
 
-# class PostDetail(generic.DetailView):
-    # model = Post
-    # template_name = 'blog/post_detail.html'
-
 def post_detail(request, slug):
-    template_name = 'post_detail.html'
+    template_name = 'blog/post_detail.html'
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=True)
     new_comment = None
