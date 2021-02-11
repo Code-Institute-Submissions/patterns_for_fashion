@@ -7,6 +7,7 @@ from django.views import generic
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'blog/blog.html'
+    paginate_by = 3
 
 
 def post_detail(request, slug):
