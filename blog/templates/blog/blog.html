@@ -18,7 +18,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-10 mx-auto">
+                <div class="col-md-8 mt-3 left">
                     <hr>
                     <h2 class="logo-font mb-4">Patterns <span class="red-text">4</span> Fashion <span class="red-text">Blog</span></h2>
                     <hr>
@@ -31,13 +31,13 @@
             <div class="col-md-8 mt-3 left">
                 {% for post in post_list %}
                 <div class="card shadow-lg mb-4">
-                    <div class="card-body">
+                    <div class="card-body ml-md-5 mr-md-5">
                         <h2 class="card-title">{{ post.title }}</h2>
                         <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on }}</p>
                         <a href="{% url 'post_detail' post.slug %}">
-                            <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.name }}" class="card-img-top w-50 mx-auto d-block">
+                            <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.name }}" class="card-img-top w-50 img-fluid mx-auto d-block">
                         </a>
-                        <p class="card-text">{{ post.content|slice:":200" }}</p>
+                        <p class="card-text">{{ post.content|slice:":80" }}</p>
                         <a href="{% url 'post_detail' post.slug %}" class="btn btn-outline-black">Read More &rarr;</a>
                     </div>
                 </div>
