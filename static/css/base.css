@@ -325,6 +325,15 @@ input[name='q']::placeholder {
     color: #17a2b8;
 }
 
+.cover-text {
+    font-size: 130%;
+    width: 300px;
+    height: 200px;
+    padding-top: 30px;
+    padding-left: 10px;
+    background-color: rgba(0,0,0,0.25);
+}
+
 /* ---------------------------------------------------------------Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -392,6 +401,7 @@ input[name='q']::placeholder {
     
     .jumbotron {
         font-size: large;
+        min-width: fit-content;
     }
 
     .icons-index {
