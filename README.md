@@ -1,4 +1,4 @@
-<h1 align="center">Patterns For Fashion
+<h1 align="center">Patterns For Fashion</h1>
 
 ![Mock-up](static/assets/images/readme/mock-up.png)
 
