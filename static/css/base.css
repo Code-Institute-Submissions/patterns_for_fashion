@@ -379,7 +379,7 @@ input[name='q']::placeholder {
     }
 
     .cover-text {
-        top: -100px;
+        top: -90px;
         font-size: 120%;
         width: 240px;
         height: 130px;
@@ -422,7 +422,26 @@ input[name='q']::placeholder {
 }
 
 @media (max-width: 360px) {
-    body {
+    .list-inline-item {
         font-size: 8px !important;
+    }
+
+    .cover-text {
+        top: -60px;
+        font-size: 120%;
+        width: 207px;
+        height: 100px;
+        padding-top: 20px;
+        position: absolute;
+    }
+
+    .cover-text h4 {
+        font-size: 80%;
+    }
+
+    .cover-text a {
+        width: 180px;
+        height: 35px;
+        font-size: 70%;
     }
 }

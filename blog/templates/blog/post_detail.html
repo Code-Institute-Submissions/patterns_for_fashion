@@ -19,11 +19,11 @@
             <div class="col-md-8 mt-3 left top">
                 <div class="card shadow-lg mb-4">
                     <div class="card-body ml-md-5 mr-md-5">
-                        <p class=" text-muted my-5">{{ post.author }} | {{ post.created_on }}</p>
-                        <h2 class="text-center my-5">{% block title %} {{ post.title }} {% endblock title %}</h2>
-                        <a class="my-3" href="{% url 'post_detail' post.slug %}">
+                        <a href="{% url 'post_detail' post.slug %}">
                             <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.name }}" class="img-fluid mx-auto d-block">
                         </a>
+                        <small class="text-muted"><em>published on {{ post.created_on }}</em></small>
+                        <h1 class="text-center my-5">{% block title %} {{ post.title }} {% endblock title %}</h1>
                         <p class="card-text my-5">{{ post.content | safe }}</p>
                         <a href="{% url 'blog' %}" class="btn btn-black rounded-0">Back to Blog</a>
                     </div>
@@ -40,9 +40,9 @@
                         <div class="comments">
                             <p class="font-weight-bold">
                                 {{ comment.name }}
-                                <span class="text-muted font-weight-normal">
-                                    {{ comment.created_on }}
-                                </span>
+                                <small class="text-muted font-weight-normal">
+                                    <em>{{ comment.created_on }}</em>
+                                </small>
                             </p>
                             {{ comment.body | linebreaks }}
                         </div>
