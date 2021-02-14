@@ -80,16 +80,19 @@
 1. As a site visitor I want to be able to add comments to the blog posts.
 ## Design
 ### **Color Palette**
+![Color Palette](static/color-palette.png)
 ### **Typography**
+Main font-family used throughout the website is [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display?query=DM+Serif+Display&preview.layout=row&preview.text_type=custom).
 ### **Imagery**
 All images used for the ads posted in the website were taken by the developer and are subject for demonstration only.
 ## Wireframes
--   ![home](static/assets/images/wireframes/home.png)
--   ![register](static/assets/images/wireframes/register.png)
--   ![login](static/assets/images/wireframes/login.png)
--   ![post](static/assets/images/wireframes/post.png)
--   ![contact](static/assets/images/wireframes/contact.png)
--   ![mobile](static/assets/images/wireframes/mobile.png)
+-   ![home](static/wireframes/homepage.jpg)
+-   ![register](static/wireframes/register.jpg)
+-   ![login](static/wireframes/login.jpg)
+-   ![product details](static/wireframes/productdetails.jpg)
+-   ![products](static/wireframes/products.jpg)
+-   ![profile](static/wireframes/profile.jpg)
+-   ![mobile](static/wireframes/mobile.jpg)
 # Features
 1. Responsiveness on different device sizes.
 1. Mobile collapse button.
@@ -111,11 +114,6 @@ All images used for the ads posted in the website were taken by the developer an
 1. Defensive programming. The Delete Account button in the profile page triggers a dialog modal which gives the user the
     possibility to choose from deleting the account or not. Same works for Delete button for the ads users can post.
 ## Features left to implement
-1. Side Filter with index options for area, condition, category.
-1. Add to User's Profile the contact details and password.
-1. The User's option to edit the profile.
-1. The User's option to post an advertising with the registered profile details.
-1. The contact form to being automatically filled in with the username and emailaddress of the user currently logged in.
 # Technologies Used
 ## Languages Used
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -132,8 +130,6 @@ All images used for the ads posted in the website were taken by the developer an
     - jQuery was used for the interactive features.
 1. [Randomkeygen:](https://randomkeygen.com/)
     - Randomkeygen was used for generating Fort Knox password.
-1. [EmailJS:](https://www.emailjs.com/)
-    - EmailJS was used to connect the contact form to the email address.
 1. [Color Hex:](https://www.color-hex.com/)
     - Color hex was used to set the color palette.
 1. [Git](https://git-scm.com/)
@@ -161,9 +157,6 @@ All images used for the ads posted in the website were taken by the developer an
     can visit the home page where the ads are displayed, log in/register or submit a contact form.
 -   When the user is logged in, the navbar displays Home, My Account, Post Ad, Log Out and Contact Us pages.
 -   On mobile devices the navbar displays an active burger-menu icon. If clicked, the icon displays the list of all functional page links.
-### Ads
--   Are displayed all on the home page.
--   The card reveal opens up by clicking on the photo or title of the card-content. It closes back by ckicking on the x symbol.
 ### Search bar
 -   The user can search ads by typing inside the search bar words selected from the title, description and category name sections of the cards.
 -   The reset button brings the user back to the home page to all ads.
@@ -173,9 +166,6 @@ All images used for the ads posted in the website were taken by the developer an
 -   If the user tries to log in with a username which doesn't exist in the database, the message "Username doesn't exists"
     flashes and the user gets redirected to register page.
 ### Toast Messages
-### Contact Form
--   The submitted message arrives in the connected email, but the flash message doesn't display as expected as explained in the known
-    bugs section. For this reason, in the javascript code was added "this.reset()" so that at least the form gets refreshed after being submitted.
 ### Footer section
 -   The footer section is fixed on the bottom of all the web pages.
 -   The external social media links from the footer sections open in an external window.
@@ -192,49 +182,13 @@ All images used for the ads posted in the website were taken by the developer an
 -   Friends and family members were asked to review the website to point out any bugs and/or user experience issues.
 ## Fixed Bugs
 ## Known Bugs
--   After submitting the message in the contact form the flash message doesn't display as expected and the form doesn't redirects to home page
-    because it interracts with the javascript sendEmail.js file.
 # Database Models
 
 # Deployment
 # Forking the GitHub Repository
 
-By forking the GitHub Repository you make a copy of the original repository on you GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-
-1. Log in to GitHub and locate the [Second-Choice GitHub Repository](https://github.com/mihaelasandrea/second-choice)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-
-    ![Fork Button](static/assets/images/readme/fork.png)
-3. You should now have a copy of the original repository in your GitHub account.
-
 # Making a Local Clone
 
-1. Log in to GitHub and locate the [Second-Choice GitHub Repository](https://github.com/mihaelasandrea/second-choice)
-2. Under the repository name, click "Clone or download".
-
-    ![Clone Button](static/assets/images/readme/clone.png)
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/second-choice
-```
-
-7. Press Enter. Your local clone will be created.
-
-```
-$ git clone https://github.com/YOUR-USERNAME/second-choice
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
-
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
-    to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 # Credits
 ## Images
@@ -248,8 +202,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 -   [Creating comments-system with django for the blog](https://djangocentral.com/creating-comments-system-with-django/)
 -   [Blog Post Page Pagination](https://djangocentral.com/adding-pagination-with-django/)
 ## Tutor Support
-Stephen for helping me rendering the fields in the measurements template
 ## Mentor
 ## Slack Comunity
-https://github.com/AsunaMasuda/FloweryDays from peer-review code found an inspirational article where I learned about database modelling
 ## My Family
