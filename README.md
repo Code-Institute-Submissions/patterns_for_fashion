@@ -5,8 +5,7 @@
 # Table of contents
 1. [User Experience](#user-experience)
     1. [User Stories](#user-stories)
-        1. [Buyer Users](#buyer-users)
-        1. [Seller Users](#seller-users)
+        1. 
     1. [Design](#design)
         1. [Overall Design](#overall-design)
         1. [Color Palette](#color-pallette)
@@ -49,8 +48,37 @@
 
 # User Experience
 ## User Stories
+### Viewing and Navigation
+1. As a buyer I want to be able to view a list of products.
+1. As a buyer I want to be able to view individual product details.
+1. As a buyer I want to be able to view the total of my purchases.
+### Registration and User Accounts
+1. As a buyer I want to be able to register for an account.
+1. As a buyer I want to be able to login or logout.
+1. As a buyer I want to be able to recover my password if I forget it.
+1. As a buyer I want to be able to receive an email confirmation after registering.
+1. As a buyer I want to be able to have a personalized user profile.
+### Sorting and Searching
+1. As a buyer I want to be able to search for a product by name or description.
+1. As a buyer I want to be able to see the searched products and the amount of results.
+1. As a buyer I want to be able to sort the products by categories, price and reviews.
+### Purchasing and Checkout
+1. As a buyer I want to be able to select a specific size and the quantity for the product when I purchase it.
+1. As a buyer I want to be able to select one product or more in order to purchase them.
+1. As a buyer I want to be able to view the items in my bag to be purchased.
+1. As a buyer I want to be able to adjust the quantity of individual items in my bag.
+1. As a buyer I want to be able to enter my payment information.
+1. As a buyer I want to be able to view an order confirmation after checkout and receive and email confirmation.
+1. As a buyer I want that my personal details and payment information is safe and secure.
+### Admin and Store Management
+1. As the owner of the site I want to have the choice to add a product to the website directly from the site and not through admin.
+1. As the owner of the site I want to be able to edit/update a product.
+1. As the owner of the site I want to be able to delete a product.
+### Blog 
+1. As a site visitor I want to be able to view the list of the latest news the site has to offer.
+1. As a site visitor I want to be able to read individual posts on the blog page.
+1. As a site visitor I want to be able to add comments to the blog posts.
 ## Design
-### **Overall design**
 ### **Color Palette**
 ### **Typography**
 ### **Imagery**
