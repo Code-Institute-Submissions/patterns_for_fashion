@@ -60,6 +60,14 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                   <li class="list-inline-item">
+                        <a href="{% url 'home' %}" class="nav-link">
+                            <div class="text-center">
+                                <div><i class="fas fa-home fa-lg"></i></div>
+                                <p class="my-0">Home</p>
+                            </div>
+                        </a>
+                    </li>
                     <li class="list-inline-item">
                         <a href="{% url 'blog' %}" class="nav-link">
                             <div class="text-center">
@@ -75,12 +83,13 @@
                                <p class="my-0">My PFF</p>
                            </div>
                        </a>
-                       <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                       <div class="dropdown-menu border-0 mr-3 ml-3" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My profile</a>
+                                <hr>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -141,27 +150,21 @@
 
     {% block content %}
     {% endblock %}
-
-    {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
         
         <footer class="container-fluid bg-white">
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <address>
                         <strong>Patterns 4 Fashion</strong>
-                        <br>Church St Hay Market <br>
+                        <br><i class="fas fa-map-marker-alt"></i> Church St Hay Market <br>
                          Tullow, County Carlow <br> N/A, Ireland<br>
-                        <abbr title="Phone">P:</abbr> +353 (059)9135588
+                        <i class="fas fa-phone"></i> +353 (059)9135588
                     </address>
                 </div>
                 <div class="col-12 col-lg-4">
                     <address>
                         <strong>Need more information? Drop us a line.</strong><br>
-                        <a href="mailto:#">patterns4fashion@mail.com</a>
+                        <a href="mailto:patterns4fashion@mail.com"><i class="fas fa-envelope"></i> patterns4fashion@mail.com</a>
                     </address>
                     <ul class="pl-0">
                         <li>
@@ -184,5 +187,9 @@
                 </div>
             </div>
         </footer>
+        {% block postloadjs %}
+        {{ block.super }}
+            <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+        {% endblock %}
   </body>
 </html>

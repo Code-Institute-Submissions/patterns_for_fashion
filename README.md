@@ -94,25 +94,39 @@ All images used for the ads posted in the website were taken by the developer an
 -   ![profile](static/wireframes/profile.jpg)
 -   ![mobile](static/wireframes/mobile.jpg)
 # Features
+## Existing Features
+Patterns 4 Fashion website is designed to give users easy access to information, simple navigation paths, clear feedback for all meaningful actions
+and safe and secured personal data storage. The site contains 6 applications: bag, blog, checkout, home, products and profiles.
+## Navbar
 1. Responsiveness on different device sizes.
 1. Mobile collapse button.
-1. Search bar where the user can find products filtered by title, category name and description.
-1. Reset button which brings the user back to the home page.
-1. Interactive cards displaying succint information of the advertised products both on card content and card reveal.
-    Card reveal gets triggered when clicked on the photo or on the title of the card content.
-1. Registration form fields: Username, Password and Password confirmation.
-1. Delete account option with dialog modal pops up to ask the user to confirm the deletion.
+1. Toast messages: Pop-up window for confirmation messages following commands as registration, logging in, logging out, add product to bag,
+remove product from the bag, etc. It can be dismmissed by click on x symbol.
+1. Logo image on the left top corner present on all pages redirects to home page.
+1. Search bar where the user can find products filtered by category and description.
+1. Apps' templates links : Home, Blog, Profiles, Shpping Bag
+-   ![navbar](static/navbar/navbar.jpg)
+1. Profiles app dropdown list when the user is not authenticated contains the links to login/register pages.
+-   ![profile collapsed](static/navbar/profile-collapsed.jpg)
+1. Profiles app dropdown list when the user is authenticated as the super user. Contains the link to
+the Product Management page where the superuser can add products to the site.
+-   ![superuser profile](static/navbar/superuser-profile.jpg)
+1. Page footer available on all pages.
+    -   Contains 3 sections:
+        -   Adress and Telephone.
+        -   Email address and Social Media links
+        -    
+-   ![footer](static/navbar/footer.jpg)
+## Home app
+## Profiles app
+1. Registration form fields: Email, Email Confirmation, Username, Password and Password confirmation.
 1. Log in form fields: Username and Password.
 1. Log out.
-1. Post advertising form fields: Category, Url for photos, Title, Description, Price,
-    Condition, Area, Telephone, Email. Option buttons for edit and cancel which brings the user to the homepage.
-1. Options for Edit and Delete the post available only for the user who posted. The delete button triggers a dialog modal asking for deletion confirmation.
-1. Confirmation messages following commands as registration, logging in, logging out, post ad, edit and delete post, etc.
-1. Contact form with 3 fields for filing in: username, email and message.
-1. 404 page implemented.
-1. Favicon.
-1. Defensive programming. The Delete Account button in the profile page triggers a dialog modal which gives the user the
-    possibility to choose from deleting the account or not. Same works for Delete button for the ads users can post.
+## Blog app
+1. 
+## Bag app
+
+
 ## Features left to implement
 # Technologies Used
 ## Languages Used
@@ -122,6 +136,8 @@ All images used for the ads posted in the website were taken by the developer an
 -   [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))
 ## Frameworks, Libraries & Programs Used
 1. [Django:](https://www.djangoproject.com/)
+    - Django Python fullstack framework used for the rapid development of the site.
+1. 
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used to add the social-media icons in the footer of the page and the various icons from the different sections of login, register, contact, post ad forms.
 1. [Google Fonts:](https://fonts.google.com/)
@@ -138,6 +154,10 @@ All images used for the ads posted in the website were taken by the developer an
     - GitHub was used to store the projects code after being pushed from Git.
 1. [Heroku:](https://heroku.com/)
     - Heroku was used for deploying the app.
+1. [AWS:](https://aws.amazon.com/?nc2=h_lg)
+    - AWS is a secure cloud services platform used to store static and media files for this site.
+1. [Stripe Api](https://stripe.com/en-nl)
+    - Stripe is a third-party payment processor used to process card payments for this site.
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the design process.
 1. [PicResize:](https://picresize.com/)

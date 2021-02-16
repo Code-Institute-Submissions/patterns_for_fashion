@@ -64,11 +64,11 @@ footer li a i:hover {
     color: #b30606;
 }
 
-address a {
+a {
     color: dimgray;
 }
 
-address a:hover {
+a:hover {
     color: #b30606;
 }
 

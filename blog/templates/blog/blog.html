@@ -34,7 +34,9 @@
                         <a href="{% url 'post_detail' post.slug %}">
                             <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.name }}" class="card-img-top w-50 mx-auto d-block">
                         </a>
-                        <h2 class="card-title text-center">{{ post.title }}</h2>
+                        <a href="{% url 'post_detail' post.slug %}">
+                            <h2 class="card-title text-center">{{ post.title }}</h2>
+                        </a>
                         <small class="card-text text-muted"> <em>published on {{ post.created_on }}</em></small>
                         <p class="card-text">{{ post.content|slice:":80" }}</p>
                         <a href="{% url 'post_detail' post.slug %}" class="btn btn-outline-black">Read More &rarr;</a>
