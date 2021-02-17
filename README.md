@@ -115,9 +115,10 @@ the Product Management page where the superuser can add products to the site.
     -   Contains 3 sections:
         -   Adress and Telephone.
         -   Email address and Social Media links
-        -    
+        -   Site's @ copyright registration 
 -   ![footer](static/navbar/footer.jpg)
 ## Home app
+
 ## Profiles app
 1. Registration form fields: Email, Email Confirmation, Username, Password and Password confirmation.
 1. Log in form fields: Username and Password.
