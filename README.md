@@ -222,6 +222,7 @@ the Product Management page where the superuser can add products to the site.
 -   [Blog tutorial](https://djangocentral.com/building-a-blog-application-with-django/)
 -   [Creating comments-system with django for the blog](https://djangocentral.com/creating-comments-system-with-django/)
 -   [Blog Post Page Pagination](https://djangocentral.com/adding-pagination-with-django/)
+-   [Full Screen Carousel on mobile](https://stackoverflow.com/questions/58760217/how-to-make-navbar-and-carousel-combined-always-full-screen/58765043#58765043)
 ## Tutor Support
 ## Mentor
 ## Slack Comunity

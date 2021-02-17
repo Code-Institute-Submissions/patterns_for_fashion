@@ -11,7 +11,7 @@ body {
 }
 
 .jumbotron {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #66666566;
     text-align: center;
     color: #f1f1f0;
     border-radius: 0;
@@ -410,11 +410,6 @@ input[name='q']::placeholder {
         object-fit: cover;
         height: calc(100vh - 380px);
         width: 100%;
-    }
-
-    section .container-fluid {
-        height: 50px;
-        font-size: medium;
     }
 }
 
