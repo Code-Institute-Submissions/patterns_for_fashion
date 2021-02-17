@@ -15,7 +15,3 @@ function myFunction() {
     moreText.style.display = "inline";
   }
 }
-
-// Script for date picker from footer index.html
-
-document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
