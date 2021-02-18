@@ -123,6 +123,20 @@ the Product Management page where the superuser can add products to the site.
 1. Registration form fields: Email, Email Confirmation, Username, Password and Password confirmation.
 1. Log in form fields: Username and Password.
 1. Log out.
+1. Profile page contains two sections:
+    -   Default Delivery Information fields which can be updated by clicking the update button:
+        -   Phone Number
+        -   Street Address 1
+        -   Street Address 2
+        -   Town or City
+        -   County, State or Locality
+        -   Postal Code
+        -   Country
+    -    View Order History Table:
+        -   Order Number
+        -   Date
+        -   Items
+        -   Order Total
 ## Blog app
 1. 
 ## Bag app
