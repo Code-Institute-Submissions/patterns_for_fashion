@@ -146,7 +146,16 @@ the Product Management page where the superuser can add products to the site.
         -   Order Total
         
 ## Blog app
-1. 
+1. Blog main page is designed to render maximum 3 posts.
+1. At the bottom of the blog page there is pagination implemented so that the user can find older posts.
+1. The most recent posts are displayed on top.
+1. Each post has on the main blog page displayed the foto, title, post date and the first 80 characters from the post content.
+1. The user can read more from the desired post by clicking the Read More button. 
+1. Blog detail post page displays the post foto, title, date and full content and a Back to Blog button which redirects to the Main blog page.
+1. Below the full post there is a comment form where users can leave a comment.
+1. Comments form fields are required: name, email and content of the comment and a submit button.
+1. After placing a comment the user must wait for the admin's approval in order to be published. This way the site`s owners will avoid spam messages.
+1. On top of the comments form there is a card where approved messages are displayed together with the post date and the user's name and messages count.
 ## Bag app
 
 
