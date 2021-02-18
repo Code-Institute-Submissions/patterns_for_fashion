@@ -118,7 +118,14 @@ the Product Management page where the superuser can add products to the site.
         -   Site's @ copyright registration 
 -   ![footer](static/navbar/footer.jpg)
 ## Home app
-
+1. 3 Slides Carousel with background images mobile responsive:
+    -   Action button redirects to all products page;
+    -   Action button redirects to blog page;
+    -   Text-cover containing text information.
+1. Jumbotron section with quote for aestethic reason.
+1. Business information section containing two cards:
+    -   General info about business with a readmore button.
+    -   Information about fabrics used in garments'production with a link button which opens in an external window.
 ## Profiles app
 1. Registration form fields: Email, Email Confirmation, Username, Password and Password confirmation.
 1. Log in form fields: Username and Password.
