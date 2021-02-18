@@ -97,7 +97,7 @@ All images used for the ads posted in the website were taken by the developer an
 ## Existing Features
 Patterns 4 Fashion website is designed to give users easy access to information, simple navigation paths, clear feedback for all meaningful actions
 and safe and secured personal data storage. The site contains 6 applications: bag, blog, checkout, home, products and profiles.
-## Navbar
+### Navbar
 1. Responsiveness on different device sizes.
 1. Mobile collapse button.
 1. Toast messages: Pop-up window for confirmation messages following commands as registration, logging in, logging out, add product to bag,
@@ -117,7 +117,7 @@ the Product Management page where the superuser can add products to the site.
         -   Email address and Social Media links
         -   Site's @ copyright registration 
 -   ![footer](static/navbar/footer.jpg)
-## Home app
+### Home app
 1. 3 Slides Carousel with background images mobile responsive:
     -   Action button redirects to all products page;
     -   Action button redirects to blog page;
@@ -126,7 +126,7 @@ the Product Management page where the superuser can add products to the site.
 1. Business information section containing two cards:
     -   General info about business with a readmore button.
     -   Information about fabrics used in garments'production with a link button which opens in an external window.
-## Profiles app
+### Profiles app
 1. Registration form fields: Email, Email Confirmation, Username, Password and Password confirmation.
 1. Log in form fields: Username and Password.
 1. Log out.
@@ -145,7 +145,7 @@ the Product Management page where the superuser can add products to the site.
         -   Items
         -   Order Total
         
-## Blog app
+### Blog app
 1. Blog main page is designed to render maximum 3 posts.
 1. At the bottom of the blog page there is pagination implemented so that the user can find older posts.
 1. The most recent posts are displayed on top.
@@ -156,9 +156,20 @@ the Product Management page where the superuser can add products to the site.
 1. Comments form fields are required: name, email and content of the comment and a submit button.
 1. After placing a comment the user must wait for the admin's approval in order to be published. This way the site`s owners will avoid spam messages.
 1. On top of the comments form there is a card where approved messages are displayed together with the post date and the user's name and messages count.
-## Bag app
-
-
+### Bag app
+1. Shopping bag page displays information of the selected product/products for purchasing.
+1. Information content: Product's name, image, price, quantity, size, subtotal, delivery price, grand total.
+1. If the subtotal is more than 50Euro, the delivery price is 0.
+1. If the subtotal is less than 50Euro, the grand total is sums up the subtotal and the delivery price. The user is notified by a message which recommends
+to spend the extra amount so that the delivery is free from tax.
+1.  The user can add or remove products from the bag.
+1. At the bottom at the page the user can go placing the order by clicking the Secure Checkout button or go back to the all products page by
+clicking the Keep Shopping button.
+1. If the user decides to keep shopping, the item/items already chosen remain saved into the bag until they are payed or removed from the bag.
+1. After selecting the amount and size of the products, the user can checkout by clicking on the Secure Checkout button from the shopping bag page.
+1. This button redirects teh user to the checkout page.
+### Checkout app
+1. 
 ## Features left to implement
 # Technologies Used
 ## Languages Used
