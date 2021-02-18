@@ -139,11 +139,12 @@ the Product Management page where the superuser can add products to the site.
         -   County, State or Locality
         -   Postal Code
         -   Country
-    -    View Order History Table:
+    -   View Order History Table:
         -   Order Number
         -   Date
         -   Items
         -   Order Total
+        
 ## Blog app
 1. 
 ## Bag app

@@ -17,7 +17,7 @@
     <header class="masthead">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 mt-3 left">
+                <div class="col-sm-12 col-md-6">
                     <hr>
                     <h2 class="logo-font mb-4">Patterns <span class="red-text">4</span> Fashion <span class="red-text">Blog</span></h2>
                     <hr>
@@ -27,9 +27,8 @@
     </header>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mt-3 left">
                 {% for post in post_list %}
-                <div class="card shadow-lg mb-4">
+                <div class="col-sm-12 col-md-6 card shadow-lg py-5 px-md-5 mb-5 ml-2 mr-2">
                     <div class="card-body ml-md-5 mr-md-5">
                         <a href="{% url 'post_detail' post.slug %}">
                             <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.name }}" class="card-img-top w-50 mx-auto d-block">
@@ -43,7 +42,6 @@
                     </div>
                 </div>
                 {% endfor %}
-            </div>
         </div>
     </div>
     {% if is_paginated %}
