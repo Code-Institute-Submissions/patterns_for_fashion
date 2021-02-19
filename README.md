@@ -111,6 +111,11 @@ remove product from the bag, etc. It can be dismmissed by click on x symbol.
 1. Profiles app dropdown list when the user is authenticated as the super user. Contains the link to
 the Product Management page where the superuser can add products to the site.
 -   ![superuser profile](static/navbar/superuser-profile.jpg)
+1. Main nav page contains:
+    -   Filter dropdown list by price, rating, category and the url to the all products page.
+    -   Url to dresses products category;
+    -   Url to shirts products category;
+    -   Url to all products;
 1. Page footer available on all pages.
     -   Contains 3 sections:
         -   Adress and Telephone.
@@ -126,6 +131,17 @@ the Product Management page where the superuser can add products to the site.
 1. Business information section containing two cards:
     -   General info about business with a readmore button.
     -   Information about fabrics used in garments'production with a link button which opens in an external window.
+### Blog app
+1. Blog main page is designed to render maximum 3 posts.
+1. At the bottom of the blog page there is pagination implemented so that the user can find older posts.
+1. The most recent posts are displayed on top.
+1. Each post has on the main blog page displayed the foto, title, post date and the first 80 characters from the post content.
+1. The user can read more from the desired post by clicking the Read More button. 
+1. Blog detail post page displays the post foto, title, date and full content and a Back to Blog button which redirects to the Main blog page.
+1. Below the full post there is a comment form where users can leave a comment.
+1. Comments form fields are required: name, email and content of the comment and a submit button.
+1. After placing a comment the user must wait for the admin's approval in order to be published. This way the site`s owners will avoid spam messages.
+1. On top of the comments form there is a card where approved messages are displayed together with the post date and the user's name and messages count.
 ### Profiles app
 1. Registration form fields: Email, Email Confirmation, Username, Password and Password confirmation.
 1. Log in form fields: Username and Password.
@@ -144,18 +160,25 @@ the Product Management page where the superuser can add products to the site.
         -   Date
         -   Items
         -   Order Total
-        
-### Blog app
-1. Blog main page is designed to render maximum 3 posts.
-1. At the bottom of the blog page there is pagination implemented so that the user can find older posts.
-1. The most recent posts are displayed on top.
-1. Each post has on the main blog page displayed the foto, title, post date and the first 80 characters from the post content.
-1. The user can read more from the desired post by clicking the Read More button. 
-1. Blog detail post page displays the post foto, title, date and full content and a Back to Blog button which redirects to the Main blog page.
-1. Below the full post there is a comment form where users can leave a comment.
-1. Comments form fields are required: name, email and content of the comment and a submit button.
-1. After placing a comment the user must wait for the admin's approval in order to be published. This way the site`s owners will avoid spam messages.
-1. On top of the comments form there is a card where approved messages are displayed together with the post date and the user's name and messages count.
+1. The profile information can also be stored when the user checks out. The checkbox at the bottom of the checkout form must be selected.
+### Products app
+The Products app has two basic html templates:
+1. Products page:
+    -   Displays all products for the user to view.
+    -   The products are displayed as cards containing on top the products image and on the bottom the title, price, category and rating.
+    -   Cards are responsive on different device sizes:
+        -   on mobile 1 card per row;
+        -   on medium size: 2 cards per row;
+        -   on large size:3 cards per row;
+        -   on extra large 4 cards per row;
+    -   The card/set of cards rows are divided inbetween by the a horizontal rule.
+1. Product detail page: cards per row
+    -   Displays each individual product when selected from the products page.
+    -   Renders the product details like image, title, price, category and rating.
+    -   The user can choose a size from the size dropdown list. The size M is selected by default.
+    -   The user can select the quantity of the product by clicking on + or - from the quantity input field. There is a maximum input set to 99.
+    -   The user can add the product to the bag by clicking on the Add to Bag button.
+    -   The user can go back to the products view page and continue shopping by clicking on the keep shopping button. The added product remains saved in the shopping bag.
 ### Bag app
 1. Shopping bag page displays information of the selected product/products for purchasing.
 1. Information content: Product's name, image, price, quantity, size, subtotal, delivery price, grand total.
@@ -195,6 +218,7 @@ After clicking on the Secure Checkout button, the user get redirected to the che
 that the order has been successfully processed and the order number.
 The Checkout Success page displays all the order's information: order number, date, purchased products, amount and size, adress and billing info as
 well the text reminding the user that the confirmation email was send to the input email address.
+
 ## Features left to implement
 # Technologies Used
 ## Languages Used
