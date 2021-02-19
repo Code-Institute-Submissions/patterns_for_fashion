@@ -99,18 +99,19 @@ Patterns 4 Fashion website is designed to give users easy access to information,
 and safe and secured personal data storage. The site contains 6 applications: bag, blog, checkout, home, products and profiles.
 ### Navbar
 1. Responsiveness on different device sizes.
-1. Mobile collapse button.
+1. Mobile collapse button which renders links to the Home, Blog, Filter, Dresses, Shirts and All Garments pages.
 1. Toast messages: Pop-up window for confirmation messages following commands as registration, logging in, logging out, add product to bag,
 remove product from the bag, etc. It can be dismmissed by click on x symbol.
-1. Logo image on the left top corner present on all pages redirects to home page.
-1. Search bar where the user can find products filtered by category and description.
-1. Apps' templates links : Home, Blog, Profiles, Shpping Bag
--   ![navbar](static/navbar/navbar.jpg)
-1. Profiles app dropdown list when the user is not authenticated contains the links to login/register pages.
--   ![profile collapsed](static/navbar/profile-collapsed.jpg)
-1. Profiles app dropdown list when the user is authenticated as the super user. Contains the link to
-the Product Management page where the superuser can add products to the site.
--   ![superuser profile](static/navbar/superuser-profile.jpg)
+1. Top navbar
+    1. Logo image on the left top corner present on all pages redirects to home page.
+    1. Search bar where the user can find products filtered by category and description set in the top middle.
+    1. Links to the site's apps on top right: Home, Blog, Profiles, Shopping Bag
+        -   ![navbar](static/navbar/navbar.jpg)
+    1. Profiles app dropdown list when the user is not authenticated contains the links to login/register pages.
+        -   ![profile collapsed](static/navbar/profile-collapsed.jpg)
+    1. Profiles app dropdown list when the user is authenticated as the super user. Contains the link to
+    the Product Management page where the superuser can add products to the site.
+        -   ![superuser profile](static/navbar/superuser-profile.jpg)
 1. Main nav page contains:
     -   Filter dropdown list by price, rating, category and the url to the all products page.
     -   Url to dresses products category;
@@ -119,8 +120,8 @@ the Product Management page where the superuser can add products to the site.
 1. Page footer available on all pages.
     -   Contains 3 sections:
         -   Adress and Telephone.
-        -   Email address and Social Media links
-        -   Site's @ copyright registration 
+        -   Email address and Social Media links wich open in an external link.
+        -   Site's @ copyright and year which updates automatically.
 -   ![footer](static/navbar/footer.jpg)
 ### Home app
 1. 3 Slides Carousel with background images mobile responsive:
@@ -171,8 +172,8 @@ The Products app has two basic html templates:
         -   on medium size: 2 cards per row;
         -   on large size:3 cards per row;
         -   on extra large 4 cards per row;
-    -   The card/set of cards rows are divided inbetween by the a horizontal rule.
-1. Product detail page: cards per row
+    -   The card/set of cards rows are divided vertically by the a horizontal rule.
+1. Product detail page:
     -   Displays each individual product when selected from the products page.
     -   Renders the product details like image, title, price, category and rating.
     -   The user can choose a size from the size dropdown list. The size M is selected by default.
