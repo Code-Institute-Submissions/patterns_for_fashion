@@ -191,6 +191,10 @@ The Checkout page contains two cards:
 1. Order Summary with items number.
     -   For each item added to the order: image, size, quantity and subtotal.
     -   At the bottom of the summary: the Order Total, the Delivery Cost (if applicable), and the Grand Total.
+After clicking on the Secure Checkout button, the user get redirected to the checkout succes page and get a toast message with the confirmation
+that the order has been successfully processed and the order number.
+The Checkout Success page displays all the order's information: order number, date, purchased products, amount and size, adress and billing info as
+well the text reminding the user that the confirmation email was send to the input email address.
 ## Features left to implement
 # Technologies Used
 ## Languages Used
