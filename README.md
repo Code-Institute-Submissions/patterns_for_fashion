@@ -169,7 +169,28 @@ clicking the Keep Shopping button.
 1. After selecting the amount and size of the products, the user can checkout by clicking on the Secure Checkout button from the shopping bag page.
 1. This button redirects teh user to the checkout page.
 ### Checkout app
-1. 
+The Checkout page contains two cards:
+1. The Checkout Form which the user needs to complete in order to finalize the order purchase.
+    -   The form contains the following fields sets: 
+        1. User's Details:
+            -   Full Name
+            -   Email address
+            -   Telephone number
+        1. Delivery address details: 
+            -   Street Address 1
+            -   Street Address 2 (not required)
+            -   Town or City, County
+            -   State or Locality
+            -   Postal Code
+            -   Country
+        1. Payment field where the user can input the card number for validation.
+    -   At the bottom of the users's details fields there is a checkbox which if checked, it saves the info to the user's profile.
+    -   At the bottom of the checkout form the user can finalize the payment by clicking on the Complete Order button or adjust 
+    the bag by clicking on the Adjust Bag button which redirects the user to the Shopping Bag page.
+    -   Underneath the buttons there is an alert type of text reminding the user the amount of money the user will be charged.
+1. Order Summary with items number.
+    -   For each item added to the order: image, size, quantity and subtotal.
+    -   At the bottom of the summary: the Order Total, the Delivery Cost (if applicable), and the Grand Total.
 ## Features left to implement
 # Technologies Used
 ## Languages Used
