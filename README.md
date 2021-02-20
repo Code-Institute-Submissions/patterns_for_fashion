@@ -120,7 +120,7 @@ remove product from the bag, etc. It can be dismmissed by click on x symbol.
 1. Page footer available on all pages.
     -   Contains 3 sections:
         -   Adress and Telephone.
-        -   Email address and Social Media links wich open in an external link.
+        -   Email address and Social Media links wich open in an external window.
         -   Site's @ copyright and year which updates automatically.
 -   ![footer](static/navbar/footer.jpg)
 ### Home app
@@ -191,7 +191,7 @@ to spend the extra amount so that the delivery is free from tax.
 clicking the Keep Shopping button.
 1. If the user decides to keep shopping, the item/items already chosen remain saved into the bag until they are payed or removed from the bag.
 1. After selecting the amount and size of the products, the user can checkout by clicking on the Secure Checkout button from the shopping bag page.
-1. This button redirects teh user to the checkout page.
+1. This button redirects the user to the checkout page.
 ### Checkout app
 The Checkout page contains two cards:
 1. The Checkout Form which the user needs to complete in order to finalize the order purchase.
@@ -215,11 +215,12 @@ The Checkout page contains two cards:
 1. Order Summary with items number.
     -   For each item added to the order: image, size, quantity and subtotal.
     -   At the bottom of the summary: the Order Total, the Delivery Cost (if applicable), and the Grand Total.
-After clicking on the Secure Checkout button, the user get redirected to the checkout succes page and get a toast message with the confirmation
+1. After clicking on the Secure Checkout button, the user get redirected to the checkout succes page and get a toast message with the confirmation
 that the order has been successfully processed and the order number.
-The Checkout Success page displays all the order's information: order number, date, purchased products, amount and size, adress and billing info as
+1. The Checkout Success page displays all the order's information: order number, date, purchased products, amount and size, adress and billing info as
 well the text reminding the user that the confirmation email was send to the input email address.
-
+1. After the payment is completed the shopping bag is updated to no products.
+1. 
 ## Features left to implement
 # Technologies Used
 ## Languages Used
