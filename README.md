@@ -220,8 +220,10 @@ that the order has been successfully processed and the order number.
 1. The Checkout Success page displays all the order's information: order number, date, purchased products, amount and size, adress and billing info as
 well the text reminding the user that the confirmation email was send to the input email address.
 1. After the payment is completed the shopping bag is updated to no products.
-1. 
 ## Features left to implement
+1. The possibility for the users to order garments on custom size.
+1. The possibility for the users to add reviews for the products.
+1. The possibility for the users to add products to the wish list.
 # Technologies Used
 ## Languages Used
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -231,7 +233,10 @@ well the text reminding the user that the confirmation email was send to the inp
 ## Frameworks, Libraries & Programs Used
 1. [Django:](https://www.djangoproject.com/)
     - Django Python fullstack framework used for the rapid development of the site.
-1. 
+1. [AWS:](https://aws.amazon.com/?nc2=h_lg)
+    - AWS is a secure cloud services platform used to store static and media files for this site.
+1. [Stripe Api](https://stripe.com/en-nl)
+    - Stripe is a third-party payment processor used to process card payments for this site.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used to add the social-media icons in the footer of the page and the various icons from the different sections of login, register, contact, post ad forms.
 1. [Google Fonts:](https://fonts.google.com/)
@@ -248,10 +253,6 @@ well the text reminding the user that the confirmation email was send to the inp
     - GitHub was used to store the projects code after being pushed from Git.
 1. [Heroku:](https://heroku.com/)
     - Heroku was used for deploying the app.
-1. [AWS:](https://aws.amazon.com/?nc2=h_lg)
-    - AWS is a secure cloud services platform used to store static and media files for this site.
-1. [Stripe Api](https://stripe.com/en-nl)
-    - Stripe is a third-party payment processor used to process card payments for this site.
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes during the design process.
 1. [PicResize:](https://picresize.com/)
@@ -297,16 +298,14 @@ well the text reminding the user that the confirmation email was send to the inp
 ## Fixed Bugs
 ## Known Bugs
 # Database Models
-
+![datamodelling](static/datamodelling/datamodelling.png)
 # Deployment
-# Forking the GitHub Repository
-
-# Making a Local Clone
-
 
 # Credits
 ## Images
+Images are taken by the developer and are used for educational reasons only.
 ## Code
+Code for the website was written following the Boutique Ado project tutorials from Code Institute.
 -   [Dropdown select images](https://www.w3schools.com/howto/howto_js_dropdown.asp)
 -   [JavaScript for update year in the footer copyright section.](https://stackoverflow.com/questions/4562587/shortest-way-to-print-current-year-in-a-website)
 -   [Summary tag in the info card on index.html](https://www.w3schools.com/tags/tag_summary.asp)
