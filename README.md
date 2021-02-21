@@ -299,11 +299,24 @@ well the text reminding the user that the confirmation email was send to the inp
 ## Known Bugs
 # Database Models
 ![datamodelling](static/datamodelling/datamodelling.png)
+### UserProfile
+
+*Name* | **Database Key** | **Field Type** | **Validation**
+--- | --- | --- | ---
+User | user | OneToOneField | on_delete=models.CASCADE
+Phone | default_phone_number | CharField | max_length=20, null=True, blank=True
+Street Address 1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
+Street Address 1 | default_street_address2 | CharField | max_length=80, null=True, blank=True
+Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
+County, Locality | default_county | CharField | max_length=80, null=True, blank=True
+Post Code | default_postcode | CharField | max_length=20, null=True, blank=True
+Country | default_country | CountryField | blank_label='Country', null=True, blank=True
+
 # Deployment
 
 # Credits
 ## Images
-Images are taken by the developer and are used for educational reasons only.
+Images are taken by the developer and are used for educational purposes only.
 ## Code
 Code for the website was written following the Boutique Ado project tutorials from Code Institute.
 -   [Dropdown select images](https://www.w3schools.com/howto/howto_js_dropdown.asp)

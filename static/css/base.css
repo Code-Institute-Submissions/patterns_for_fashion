@@ -38,7 +38,7 @@ body {
 footer {
     text-align: center;
     padding-top: 40px;
-    margin-top: 180px;
+    margin-top: 450px;
 }
 
 footer li {
@@ -382,6 +382,10 @@ input[name='q']::placeholder {
 
     footer li a i {
         font-size: 15px;
+    }
+
+    footer {
+        margin-top: 150px;
     }
 
     .cover-text {
