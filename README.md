@@ -299,7 +299,9 @@ well the text reminding the user that the confirmation email was send to the inp
 ## Known Bugs
 # Database Models
 ![datamodelling](static/datamodelling/datamodelling.png)
-### UserProfile
+
+### Profiles app
+#### UserProfile
 
 **Name** | **Database Key** | **Field Type** | **Validation**
 --- | --- | --- | ---
@@ -312,7 +314,8 @@ County, State or Locality | default_county | CharField | max_length=80, null=Tru
 Post Code | default_postcode | CharField | max_length=20, null=True, blank=True
 Country | default_country | CountryField | blank_label='Country', null=True, blank=True
 
-### Post
+### Blog app
+#### Post
 **Name** | **Database Key** | **Field Type** | **Validation**
 --- | --- | --- | ---
 Title | title | CharField | max_length=200, unique=True
@@ -335,6 +338,56 @@ Body | body | TextField |
 Created on | created_on | DateTimeField | auto_now_add=True
 Active | active | BooleanField | default=False |
 
+### Checkout app
+#### Order
+**Name** | **Database Key** | **Field Type** | **Validation**
+--- | --- | --- | ---
+Order number | order_number | CharField | max_length=32, null=False, editable=False
+User profile | user_profile | ForeignKey | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+Full name | full_name | CharField | max_length=50, null=False, blank=False
+Email | email | EmailField | max_length=254, null=False, blank=False
+Phone number | phone_number | CharField | max_length=20, null=False, blank=False
+Country | country | CountryField | blank_label='Country *', null=False, blank=False
+Post code | postcode | CharField | max_length=20, null=True, blank=True
+Town, City or Locality | town_or_city | CharField | max_length=40, null=False, blank=False
+Street Address 1 | street_address1 | CharField | max_length=80, null=False, blank=False
+Street Address 2 | street_address2 | CharField | max_length=80, null=True, blank=True
+County | county | CharField | max_length=80, null=True, blank=True
+Date | date | DateTimeField | auto_now_add=True
+Delivery cost | delivery_cost | DecimalField | max_digits=6, decimal_places=2, null=False, default=0
+Order total | order_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0
+Grand total | grand_total | DecimalField | max_digits=10, decimal_places=2, null=False, default=0
+Original bag | original_bag | TextField | null=False, blank=False, default=''
+Stripe pid | stripe_pid | CharField | max_length=254, null=False, blank=False, default=''
+
+### OrderLineItem
+**Name** | **Database Key** | **Field Type** | **Validation**
+--- | --- | --- | ---
+Order | order | ForeignKey | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'
+Product | product | ForeignKey | null=False, blank=False, on_delete=models.CASCADE
+Product size | product_size | CharField | max_length=2, null=True, blank=True
+Quantity | quantity | IntegerField | null=False, blank=False, default=0
+LIne Item Total | lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False
+
+### Products app
+#### Product
+**Name** | **Database Key** | **Field Type** | **Validation**
+--- | --- | --- | ---
+Category | category | ForeignKey | null=True, blank=True, on_delete=models.SET_NULL
+Sku | sku | CharField | max_length=254, null=True, blank=True
+Name | name | CharField | max_length=254
+DEscription | description | TextField | 
+Has sizes | has_sizes | BooleanField | default=False, null=True, blank=True
+Price | price | DecimalField | max_digits=6, decimal_places=2
+Rating | rating | DecimalField | max_digits=6, decimal_places=2, null=True, blank=True
+Image url | image_url | URLField | max_length=1024, null=True, blank=True
+Image | image | ImageField | null=True, blank=True
+
+### Category 
+**Name** | **Database Key** | **Field Type** | **Validation**
+--- | --- | --- | ---
+Name | name | CharField | max_length=254
+Friendly name | friendly_name | CharField | max_length=254, null=True, blank=True
 
 # Deployment
 
