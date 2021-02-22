@@ -301,16 +301,40 @@ well the text reminding the user that the confirmation email was send to the inp
 ![datamodelling](static/datamodelling/datamodelling.png)
 ### UserProfile
 
-*Name* | **Database Key** | **Field Type** | **Validation**
+**Name** | **Database Key** | **Field Type** | **Validation**
 --- | --- | --- | ---
 User | user | OneToOneField | on_delete=models.CASCADE
-Phone | default_phone_number | CharField | max_length=20, null=True, blank=True
+Phone Number | default_phone_number | CharField | max_length=20, null=True, blank=True
 Street Address 1 | default_street_address1 | CharField | max_length=80, null=True, blank=True
 Street Address 1 | default_street_address2 | CharField | max_length=80, null=True, blank=True
 Town or City | default_town_or_city | CharField | max_length=40, null=True, blank=True
-County, Locality | default_county | CharField | max_length=80, null=True, blank=True
+County, State or Locality | default_county | CharField | max_length=80, null=True, blank=True
 Post Code | default_postcode | CharField | max_length=20, null=True, blank=True
 Country | default_country | CountryField | blank_label='Country', null=True, blank=True
+
+### Post
+**Name** | **Database Key** | **Field Type** | **Validation**
+--- | --- | --- | ---
+Title | title | CharField | max_length=200, unique=True
+Image url | image_url | URLField | max_length=1024, null=True, blank=True
+Image | image | ImageField | null=True, blank=True
+Slug | slug | SlugField | max_length=200, unique=True
+Author | author | ForeignKey | on_delete=models.CASCADE, related_name='blog_posts'
+Updated on | updated_on | DateTimeField | auto_now=True
+Content | content | TextField |
+Created on | created_on | DateTimeField | auto_now_add=True
+Status | status | IntegerField | choices=STATUS, default=0
+
+### Comment
+**Name** | **Database Key** | **Field Type** | **Validation**
+--- | --- | --- | ---
+Post | post | ForeignKey | on_delete=models.CASCADE, related_name='comments'
+Name | name | CharField | max_length=80
+Email | email | EmailField |
+Body | body | TextField |
+Created on | created_on | DateTimeField | auto_now_add=True
+Active | active | BooleanField | default=False |
+
 
 # Deployment
 
