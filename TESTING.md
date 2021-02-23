@@ -33,11 +33,18 @@
     -   ![Registration Confirmation](static/testing/registration.png)
 1. As a buyer I want to be able to have a personalized user profile.
     -   The user profile page displays a form where the user can enter personal information
-    -   A the bottom of the form there is an order history card where the user can view the past orders if any.
+    -   At the bottom of the form there is an order history card where the user can view the past orders if any.
 ### Sorting and Searching
 1. As a buyer I want to be able to search for a product by name or description.
+    -   When the user enters a word in the search bar which is to be found in the product(s) description or name, than the page renders the specific product(s)
+    -   When the searched word doesn't exist in the name or description of any product, there is a message displaying letting the user know that there are 0 results.
+    -   ![Search](static/testing/search.png)
+    -   As a known bug, if the user enters more than a word then, the search results are 0.
 1. As a buyer I want to be able to see the searched products and the amount of results.
+    -   When the user enters a valid search word, the products page displays the specific product(s) and their amount. 
 1. As a buyer I want to be able to sort the products by categories, price and reviews.
+    -   On the main navigation bar there is the filter link where the user can sort the products by categories alphabetically,
+    by price from the lowest to the highest or by reviews from the highest to the lowest. 
 ### Purchasing and Checkout
 1. As a buyer I want to be able to select a specific size and the quantity for the product when I purchase it.
 1. As a buyer I want to be able to select one product or more in order to purchase them.

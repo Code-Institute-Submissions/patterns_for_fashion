@@ -254,10 +254,12 @@ well the text reminding the user that the confirmation email was send to the inp
     - PicResize was used to resize the pictures used in the README file and for the ads links.
 1. [Easycaptures:](https://easycaptures.com/)
     - EasyCaptures was used to host the images from the ads.
-1. [Flaticon](https://www.flaticon.com/authors/freepik)
+1. [Flaticon:](https://www.flaticon.com/authors/freepik)
     - Flaticon was used to import the icon for the website favicon.
-1. [Techsini](https://techsini.com/)
+1. [Techsini:](https://techsini.com/)
     - Techsini was used to capture the mock-ups.
+1. [Dbdiagram:](https://dbdiagram.io/home)
+    - Dbdiagram was used to create the datamodelling board.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
@@ -388,6 +390,7 @@ Friendly name | friendly_name | CharField | max_length=254, null=True, blank=Tru
 Photos are taken by the developer and are used for educational purposes only.
 ## Code
 Code for the website was written following the Boutique Ado project tutorials from Code Institute.
+Inspiration from the following links as stated:
 -   [Dropdown select images](https://www.w3schools.com/howto/howto_js_dropdown.asp)
 -   [JavaScript for update year in the footer copyright section.](https://stackoverflow.com/questions/4562587/shortest-way-to-print-current-year-in-a-website)
 -   [Summary tag in the info card on index.html](https://www.w3schools.com/tags/tag_summary.asp)
