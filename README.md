@@ -54,7 +54,6 @@
 ### Admin and Store Management
 1. As the owner of the site I want to have the choice to add a product to the website directly from the site and not through admin.
 1. As the owner of the site I want to be able to edit/update a product.
-1. As the owner of the site I want to be able to delete a product.
 ### Blog 
 1. As a site visitor I want to be able to view the list of the latest news the site has to offer.
 1. As a site visitor I want to be able to read individual posts on the blog page.

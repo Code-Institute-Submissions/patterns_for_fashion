@@ -1,5 +1,7 @@
 # Contents Testing
 1. [Manual Testing](#manual-testing)
+    1. [Functionality](#functionality)
+    1. [User Experience Stories](#user-experience-stories)
 1. [Validation](#validation)
 1. [Further Testing](#further-testing)
 1. [Fixed Bugs](#fixed-bugs)
@@ -7,7 +9,7 @@
 
 # Manual Testing
 ## Functionality
-## Testing User Experience Stories
+## User Experience Stories
 ### Viewing and Navigation
 1. As a buyer I want to be able to view a list of products.
     -   When the user clicks on the All garments link in the main navigation bar, the products page display all garments.
@@ -61,21 +63,30 @@
 1. As a buyer I want that my personal details and payment information is safe and secure.
 ### Admin and Store Management
 1. As the owner of the site I want to have the choice to add a product to the website directly from the site and not through admin.
-1. As the owner of the site I want to be able to edit/update a product.
-1. As the owner of the site I want to be able to delete a product.
+    -   This feature is available only for the superuser.
+    -   If the logged in user is not authenticated as superuser, when trying to add a new product there's a toast message pop up "Sorry, only owners can do that."
+    ![Authentification alert message](static/testing/superuser.png)
+1. As the owner of the site I want to be able to edit/update/ or delete a product.
+    -   Every product both on the all products page and product detail page has the edit/delete links available only when the superuser is authenticated.
 ### Blog 
 1. As a site visitor I want to be able to view the list of the latest news the site has to offer.
+    -   The blog page renders 3 posts per page, the rest of the posts can be viewed by clicking on the NEXT/PREV button.
 1. As a site visitor I want to be able to read individual posts on the blog page.
+    -   Every individual post details: image, title, date of post, content, can be viewed by clicking on the desired post.
 1. As a site visitor I want to be able to add comments to the blog posts.
+    -   Each post detail page has a functional form for adding comments.
+    -   Any user can add a comment without being authenticated.
+    -   The comments are being moderated by the superuser from the admin panel.
+    -   ![Comment Moderation](static/testing/comment.png)
 
 # Validation
 -   [W3C Markup Validator](https://validator.w3.org/) 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
 -   [JavaScript Validator](https://jshint.com/) 
 -   [Python Validator](http://pep8online.com/) 
-## Further Testing
+# Further Testing
 -   The website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
 -   Friends and family members were asked to review the website to point out any bugs and/or user experience issues.
-## Fixed Bugs
-## Known Bugs
+# Fixed Bugs
+# Known Bugs
