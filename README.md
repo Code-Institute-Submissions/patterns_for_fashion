@@ -17,20 +17,6 @@
     1. [Languages Used](#languages-used)
     1. [Frameworks and Libraries](#frameworks-and-libraries)
 1. [Testing](#testing)
-    1. [Functionality](#functionality)
-        1. [Navigation bar](#navigation-bar)
-        1. [Ads](#ads)
-        1. [Search bar](#search-bar)
-        1. [Redirect pages](#redirect-pages)
-        1. [Flash messages](#flash-messages)
-        1. [Contact Form](#contact-form)
-        1. [Cancel Buttons](#cancel-buttons)
-        1. [Footer section](#footer-section)
-    1. [Testing User Experience Stories](#testing-user-experience-stories)
-    1. [Validation](#validation)
-    1. [Further Testing](#further-testing)
-    1. [Fixed Bugs](#fixed-bugs)
-    1. [Known Bugs](#known-bugs)
 1. [Deployment](#deployment)
 1. [Credits](#credits)
     1. [Photos](#photos)
@@ -279,39 +265,9 @@ well the text reminding the user that the confirmation email was send to the inp
 ---
 
 # Testing
-## Functionality
-### Navigation bar
--   Fixed navigation bar. It stays on top while scrolling down the page.
--   Top left brand (logo) section. When click it links to the home page and brings the user from any other webpage to the home page.
--   Top right the internal links to the main webpages when the user is not logged in: Home, Log in, Register, Contact Us. The user
-    can visit the home page where the ads are displayed, log in/register or submit a contact form.
--   When the user is logged in, the navbar displays Home, My Account, Post Ad, Log Out and Contact Us pages.
--   On mobile devices the navbar displays an active burger-menu icon. If clicked, the icon displays the list of all functional page links.
-### Search bar
--   The user can search ads by typing inside the search bar words selected from the title, description and category name sections of the cards.
--   The reset button brings the user back to the home page to all ads.
-### Redirect pages
--   If the user tries to register with a username which already exists in the database, the message "Username already exists"
-    flashes and the user gets redirected to log in page.
--   If the user tries to log in with a username which doesn't exist in the database, the message "Username doesn't exists"
-    flashes and the user gets redirected to register page.
-### Toast Messages
-### Footer section
--   The footer section is fixed on the bottom of all the web pages.
--   The external social media links from the footer sections open in an external window.
-## Testing User Experience Stories
 
-## Validation
--   [W3C Markup Validator](https://validator.w3.org/) 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
--   [JavaScript Validator](https://jshint.com/) 
--   [Python Validator](http://pep8online.com/) 
-## Further Testing
--   The website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
--   Friends and family members were asked to review the website to point out any bugs and/or user experience issues.
-## Fixed Bugs
-## Known Bugs
+Testing section is displayed in an external file [TESTING.md](TESTING.md)
+
 
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
