@@ -22,10 +22,18 @@
     -   The user can safely register in order to create an account when purchasing an item.
     -   The user can safely register when clicking on the register link from the dropdown navigation item at the top navigation bar
 1. As a buyer I want to be able to login or logout.
-    -   
+    -   The user can enter the already registered credentials and stays logged in unless the user log out.
 1. As a buyer I want to be able to recover my password if I forget it.
+    -   If the user forgets the password there is a link at the bottom of the log in form which redirects the user to password reset page
+    -   The user can enter the email address used for creating the account and press on the reset password button
+    -   The user gets redirected to the reset password form.
+    -   ![Testing Password](static/testing/testing-password.png)
 1. As a buyer I want to be able to receive an email confirmation after registering.
+    -   After registering the user receives an verification email
+    -   ![Registration Confirmation](static/testing/registration.png)
 1. As a buyer I want to be able to have a personalized user profile.
+    -   The user profile page displays a form where the user can enter personal information
+    -   A the bottom of the form there is an order history card where the user can view the past orders if any.
 ### Sorting and Searching
 1. As a buyer I want to be able to search for a product by name or description.
 1. As a buyer I want to be able to see the searched products and the amount of results.
