@@ -47,8 +47,14 @@
     by price from the lowest to the highest or by reviews from the highest to the lowest. 
 ### Purchasing and Checkout
 1. As a buyer I want to be able to select a specific size and the quantity for the product when I purchase it.
+    -   There is a dropdown select field with the options fo the xs, s, m, l, xl sizes
+    -   After selecting the size, the user can add extra items from the same size to the bag or add different sizes of the same product.
 1. As a buyer I want to be able to select one product or more in order to purchase them.
+    -   After adding the selected product to the bag, the user can continue shopping by clicking on the keep shopping button and selecting
+    another product to purchase from the all products page.
 1. As a buyer I want to be able to view the items in my bag to be purchased.
+    -   After addindg the desired products to the shopping bag, the user can view the contents of the shopping bag by clicking the alert
+    windows which notifies the user that the product was added or by simply ckicking on the bag icon top right of the top navigation bar.
 1. As a buyer I want to be able to adjust the quantity of individual items in my bag.
 1. As a buyer I want to be able to enter my payment information.
 1. As a buyer I want to be able to view an order confirmation after checkout and receive and email confirmation.

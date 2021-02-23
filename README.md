@@ -86,21 +86,30 @@ All images used for the ads posted in the website were taken by the developer an
 Patterns 4 Fashion website is designed to give users easy access to information, simple navigation paths, clear feedback for all meaningful actions
 and safe and secured personal data storage. The site contains 6 applications: bag, blog, checkout, home, products and profiles.
 ### Navbar
-1. Responsiveness on different device sizes.
-1. Mobile collapse button which renders links to the Home, Blog, Filter, Dresses, Shirts and All Garments pages.
-1. Toast messages: Pop-up window for confirmation messages following commands as registration, logging in, logging out, add product to bag,
+1. Responsiveness on different device sizes.1. Toast messages: Pop-up window for confirmation messages following commands as registration, logging in, logging out, add product to bag,
 remove product from the bag, etc. It can be dismmissed by click on x symbol.
-1. Top navbar
-    1. Logo image on the left top corner present on all pages redirects to home page.
-    1. Search bar where the user can find products filtered by category and description set in the top middle.
-    1. Links to the site's apps on top right: Home, Blog, Profiles, Shopping Bag
-        -   ![navbar](static/navbar/navbar.jpg)
-    1. Profiles app dropdown list when the user is not authenticated contains the links to login/register pages.
-        -   ![profile collapsed](static/navbar/profile-collapsed.jpg)
-    1. Profiles app dropdown list when the user is authenticated as the super user. Contains the link to
-    the Product Management page where the superuser can add products to the site.
-        -   ![superuser profile](static/navbar/superuser-profile.jpg)
-1. Main nav page contains:
+1. The navigation bar functions on two levels:
+    -   1. Top navigation bar for desktop view and mobile view
+    -   1. Main navigation bar for desktop and mobile view
+1. Top navbar:
+    -   Desktop:
+        1. Logo image on the left top corner present on all pages redirects to home page.
+        1. Search bar where the user can find products filtered by category and description set in the top middle.
+        1. Links to the site's apps on top right: Home, Blog, Profiles, Shopping Bag
+            -   ![navbar](static/navbar/navbar.jpg)
+        1. Profiles app dropdown list when the user is not authenticated contains the links to login/register pages.
+            -   ![profile collapsed](static/navbar/profile-collapsed.jpg)
+        1. Profiles app dropdown list when the user is authenticated as the super user. Contains the link to
+            the Product Management page where the superuser can add products to the site.
+            -   ![superuser profile](static/navbar/superuser-profile.jpg)
+    -   Mobile:
+        1. Dropdown menu: Home, Blog, Filter, Dresses, Shirts, All garments
+        -   ![Dropdown mobile](static/testing/dropdown.png)
+        1. Search icon which reveals a search bar when clicked
+        -   ![Searchbar mobile](static/testing/searchbar.png)
+        1. Profile dropdown for profile registration and login
+        1. Shopping Bag
+1. Main navbar:
     -   Filter dropdown list by price, rating, category and the url to the all products page.
     -   Url to dresses products category;
     -   Url to shirts products category;
