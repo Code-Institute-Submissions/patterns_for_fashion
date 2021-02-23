@@ -5,21 +5,19 @@
 # Table of contents
 1. [User Experience](#user-experience)
     1. [User Stories](#user-stories)
-        1. 
     1. [Design](#design)
-        1. [Overall Design](#overall-design)
-        1. [Color Palette](#color-pallette)
+        1. [Color Palette](#color-palette)
         1. [Typography](#typography)
         1. [Imagery](#imagery)
     1. [Wireframes](#wireframes)
-    1. [Second Chance Web Collections in MongoDB](#second-chance-collections-in-mongodb)
 1. [Features](#features)
+    1. [Existing Features](#existing-features)
     1. [Features Left to Implement](#features-left-to-implement)
 1. [Technologies Used](#technologies-used)
-    1. [Languages Used](#anguages-used)
-    1. [Frameworks, Libraries & Programs Used](#frameworks-libraries-and-programs-used)
+    1. [Languages Used](#languages-used)
+    1. [Frameworks and Libraries](#frameworks-and-libraries)
 1. [Testing](#testing)
-    1. [Functionality](#unctionality)
+    1. [Functionality](#functionality)
         1. [Navigation bar](#navigation-bar)
         1. [Ads](#ads)
         1. [Search bar](#search-bar)
@@ -28,18 +26,14 @@
         1. [Contact Form](#contact-form)
         1. [Cancel Buttons](#cancel-buttons)
         1. [Footer section](#footer-section)
-    1. [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-(UX)-Section)
-        1. [Testing Buyer User Stories](#testing-buyer-user-stories)
-        1. [Testing Seller User Stories](#testing-seller-user-stories)
+    1. [Testing User Experience Stories](#testing-user-experience-stories)
     1. [Validation](#validation)
     1. [Further Testing](#further-testing)
     1. [Fixed Bugs](#fixed-bugs)
     1. [Known Bugs](#known-bugs)
 1. [Deployment](#deployment)
-1. [Forking the GitHub Repository](#forking-the-gitHub-repository)
-1. [Making a Local Clone](#making-a-local-clone)
 1. [Credits](#credits)
-    1. [Images](#images)
+    1. [Photos](#photos)
     1. [Code](#code)
     1. [Tutor Support](#tutor-support)
     1. [Mentor](#mentor)
@@ -93,6 +87,13 @@ All images used for the ads posted in the website were taken by the developer an
 -   ![products](static/wireframes/products.jpg)
 -   ![profile](static/wireframes/profile.jpg)
 -   ![mobile](static/wireframes/mobile.jpg)
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Features
 ## Existing Features
 Patterns 4 Fashion website is designed to give users easy access to information, simple navigation paths, clear feedback for all meaningful actions
@@ -224,13 +225,20 @@ well the text reminding the user that the confirmation email was send to the inp
 1. The possibility for the users to order garments on custom size.
 1. The possibility for the users to add reviews for the products.
 1. The possibility for the users to add products to the wish list.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Technologies Used
 ## Languages Used
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JavaScript](https://nl.wikipedia.org/wiki/JavaScript)
 -   [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))
-## Frameworks, Libraries & Programs Used
+## Frameworks and Libraries
 1. [Django:](https://www.djangoproject.com/)
     - Django Python fullstack framework used for the rapid development of the site.
 1. [AWS:](https://aws.amazon.com/?nc2=h_lg)
@@ -263,6 +271,13 @@ well the text reminding the user that the confirmation email was send to the inp
     - Flaticon was used to import the icon for the website favicon.
 1. [Techsini](https://techsini.com/)
     - Techsini was used to capture the mock-ups.
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Testing
 ## Functionality
 ### Navigation bar
@@ -284,7 +299,7 @@ well the text reminding the user that the confirmation email was send to the inp
 ### Footer section
 -   The footer section is fixed on the bottom of all the web pages.
 -   The external social media links from the footer sections open in an external window.
-## Testing User Stories from User Experience (UX) Section
+## Testing User Experience Stories
 
 ## Validation
 -   [W3C Markup Validator](https://validator.w3.org/) 
@@ -297,6 +312,13 @@ well the text reminding the user that the confirmation email was send to the inp
 -   Friends and family members were asked to review the website to point out any bugs and/or user experience issues.
 ## Fixed Bugs
 ## Known Bugs
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Database Models
 ![datamodelling](static/datamodelling/datamodelling.png)
 
@@ -389,11 +411,24 @@ Image | image | ImageField | null=True, blank=True
 Name | name | CharField | max_length=254
 Friendly name | friendly_name | CharField | max_length=254, null=True, blank=True
 
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Deployment
 
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Credits
-## Images
-Images are taken by the developer and are used for educational purposes only.
+## Photos
+Photos are taken by the developer and are used for educational purposes only.
 ## Code
 Code for the website was written following the Boutique Ado project tutorials from Code Institute.
 -   [Dropdown select images](https://www.w3schools.com/howto/howto_js_dropdown.asp)
@@ -409,3 +444,9 @@ Code for the website was written following the Boutique Ado project tutorials fr
 ## Mentor
 ## Slack Comunity
 ## My Family
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
