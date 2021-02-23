@@ -32,6 +32,7 @@
 1. As a buyer I want to be able to view a list of products.
 1. As a buyer I want to be able to view individual product details.
 1. As a buyer I want to be able to view the total of my purchases.
+1. As a buyer I want to able to view the history of my orders.
 ### Registration and User Accounts
 1. As a buyer I want to be able to register for an account.
 1. As a buyer I want to be able to login or logout.

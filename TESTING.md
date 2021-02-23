@@ -10,11 +10,19 @@
 ## Testing User Experience Stories
 ### Viewing and Navigation
 1. As a buyer I want to be able to view a list of products.
+    -   When the user clicks on the All garments link in the main navigation bar, the products page display all garments.
 1. As a buyer I want to be able to view individual product details.
+    -   When the user clicks on an individual product, the product detail page displays the selected product with all the its properties.
 1. As a buyer I want to be able to view the total of my purchases.
+    -   When a user adds a product to the shopping bag, there's a pop-up alert window displaying a list of the added products.
+1. As a buyer I want to able to view the history of my orders.
+    -   At the bottom of the profile page there's a card containing the past user's orders.
 ### Registration and User Accounts
 1. As a buyer I want to be able to register for an account.
+    -   The user can safely register in order to create an account when purchasing an item.
+    -   The user can safely register when clicking on the register link from the dropdown navigation item at the top navigation bar
 1. As a buyer I want to be able to login or logout.
+    -   
 1. As a buyer I want to be able to recover my password if I forget it.
 1. As a buyer I want to be able to receive an email confirmation after registering.
 1. As a buyer I want to be able to have a personalized user profile.
