@@ -29,7 +29,7 @@ TC015 | Test Signout page | If the user confirms to sign out after clicking yes 
 TC016 | Test Register page | Redirects to the register form | Redirects to the register form | |
 TC017 | Test Login page | Redirects to the login form from the dropdownlink in the topnavbar as well as from the bottom of the register form | Redirects to the login form the dropdownlink in the topnavbar as well as from the bottom of the register form | |
 TC018 | Test Shopping Bag | When clicked redirects to the shopping bag page from all other pages and displays all elements and no distorted images | When clicked redirects to the shopping bag page from all other pages and displays all elements and no distorted images | |
-TC019 | Test Footer section | Displays at the bottom of all pages | Displays at the bottom of all pages | | Footer was set to stay fixed to the bottom by adding a top margin. See [known bugs section](#known-bugs)
+TC019 | Test Footer section | Displays at the bottom of all pages | Displays at the bottom of all pages | | See [known bugs section](#known-bugs)
 TC020 | Test Product detail page |  Product detail page displays all elements and no distorted images when clicked on an individual product | Product detail page displays all elements and no distorted images when clicked on an individual product | |
 TC021 | Test Blog Post detail page | Blog Post detail page displays all elements and no distorted images when clicked on an individual blog post | Blog Post detail page displays all elements and no distorted images when clicked on an individual blog post | |
 TC022 | Test Checkout Page | Checkout page displays all elements and all text sections are well distributed | Checkout page displays all elements and all text sections are well distributed | |
