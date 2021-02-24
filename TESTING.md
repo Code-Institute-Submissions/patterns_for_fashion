@@ -9,13 +9,17 @@
 
 # Manual Testing
 ## Functionality
-### Index.html
 **Test Case** | **Description** | **Expected Results** | **Actual Results** | **Pass/Fail** | **Comments**
 --- | --- | --- | --- | --- | ---
-TC001 | Test Website responsiveness on all screen sizes on chrome browser | Website is responsive, all elements contained and no imgages distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
-TC002 | Test Website responsiveness on all screen sizes on firefox browser | Website is responsive, all elements contained and no imgages distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
-TC002 | Test Website responsiveness on all screen sizes on microsoft edge browser | Website is responsive, all elements contained and no imgages distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
-
+TC001 | Test Website responsiveness on all screen sizes on chrome browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
+TC002 | Test Website responsiveness on all screen sizes on firefox browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
+TC003 | Test Website responsiveness on all screen sizes on microsoft edge browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
+TC004 | Test Filter link from the main navigation bar by price, rating, category and all garments | Links work well and filter products accordingly | Links work well and filter products accordingly | |
+TC005 | Test Dresses link | Link works well and displays all products from the Dresses category | Link works well and displays all products from the Dresses category | |
+TC006 | Test Shirts link from the main navigation bar | Link works well and displays all products from the Shirts category | Link works well and displays all products from the Shirts category | |
+TC007 | Test All garments link from the main navigation bar | Link works well and displays all products | Link works well and displays all products | |
+TC008 | Test logo image from the top navigation bar | The logo image redirects the user to home page from all other pages | The logo image redirects the user to home page from all other pages | |
+TC009 | Test search bar on desktop and mobile | 
 ## User Experience Stories
 ### Viewing and Navigation
 1. As a buyer I want to be able to view a list of products.
