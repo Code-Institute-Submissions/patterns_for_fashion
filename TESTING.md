@@ -19,7 +19,15 @@ TC005 | Test Dresses link | Link works well and displays all products from the D
 TC006 | Test Shirts link from the main navigation bar | Link works well and displays all products from the Shirts category | Link works well and displays all products from the Shirts category | |
 TC007 | Test All garments link from the main navigation bar | Link works well and displays all products | Link works well and displays all products | |
 TC008 | Test logo image from the top navigation bar | The logo image redirects the user to home page from all other pages | The logo image redirects the user to home page from all other pages | |
-TC009 | Test search bar on desktop and mobile | 
+TC009 | Test search bar on desktop and mobile | Searchbar renders the product(s) which contain the searched word in the product's name or description | Searchbar renders the product(s) which contain the searched word in the product's name or description | |
+TC010 | Test home page link | Link redirects to the home page when clicked from all other pages | Link redirects to the home page when clicked from all other pages | |
+TC011 | Test blog page link | Link redirects to the blog page when clicked from all other pages | Link redirects to the blog page when clicked from all other pages | |
+TC012 | Test mypff dropdown link | Link reveals the dropdown list of profile/registration/login links | Link reveals the dropdown list of profile/registration/login links | |
+TC013 | Test My profile page | When clicked, the link redirects to the profile page | When clicked, the link redirects to the profile page | |
+TC014 | Test Logout function | When clicked the user get redirected to the sign out page and asked yes/no confirmation | When clicked the user get redirected to the sign out page and asked yes/no confirmation | |
+TC015 | Test Signout page | If the user confirms to sign out after clicking yes button it redirects to home page and the dropdown list reveals login/register instead of profile/logout links | If the user confirms to sign out after clicking yes button it redirects to home page and the dropdown list reveals login/register instead of profile/logout links | |
+TC016 | Test Register page | Redirects to the register form | Redirects to the register form | |
+TC017 | 
 ## User Experience Stories
 ### Viewing and Navigation
 1. As a buyer I want to be able to view a list of products.
