@@ -9,6 +9,13 @@
 
 # Manual Testing
 ## Functionality
+### Index.html
+**Test Case** | **Description** | **Expected Results** | **Actual Results** | **Pass/Fail** | **Comments**
+--- | --- | --- | --- | --- | ---
+TC001 | Test Website responsiveness on all screen sizes on chrome browser | Website is responsive, all elements contained and no imgages distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
+TC002 | Test Website responsiveness on all screen sizes on firefox browser | Website is responsive, all elements contained and no imgages distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
+TC002 | Test Website responsiveness on all screen sizes on microsoft edge browser | Website is responsive, all elements contained and no imgages distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
+
 ## User Experience Stories
 ### Viewing and Navigation
 1. As a buyer I want to be able to view a list of products.
