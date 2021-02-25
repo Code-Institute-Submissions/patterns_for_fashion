@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(max_length=200, unique=True)),
                 ('updated_on', models.DateTimeField(auto_now=True)),
                 ('content', models.TextField()),
-                ('created_on', models.IntegerField(choices=[(0, 'Draft'), (1, 'Publish')], default=0)),
+                ('created_on', models.DateTimeField(auto_now_add=True)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='blog_posts', to=settings.AUTH_USER_MODEL)),
             ],
             options={
