@@ -1,7 +1,18 @@
-<h1 align="center">Patterns For Fashion</h1>
+# Patterns For Fashion
+The live website can be viewed [here]()
 
 ![Mock-up](static/assets/images/readme/mock-up.png)
 
+The purpose of creating this website is building an e-commerce store using Django, Postgres and Stripe payments. Users can purchase products after authenticating.
+
+The marketed products consist of carefully tailored clothes made of high quality materials.
+
+The purpose of the site's management is selling high quality garments which don't go out of fashion easily and achieve longer technical lifetime.
+
+Fast fashion is a very toxic lifestyle for the environment and people must be encouraged to buy less and smarter.
+
+Because people come in a lot of different sizes and proportions, the owners of the site have decided to create in the near future the possibility
+for the users to order garments on custom sizes. 
 # Table of contents
 1. [User Experience](#user-experience)
     1. [User Stories](#user-stories)
