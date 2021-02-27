@@ -139,6 +139,7 @@ remove product from the bag, etc. It can be dismmissed by click on x symbol.
 1. Business information section containing two cards:
     -   General info about business with a readmore button.
     -   Information about fabrics used in garments'production with a link button which opens in an external window.
+-   ![home](static/testing/home.jpg)
 ### Blog app
 1. Blog main page is designed to render maximum 3 posts.
 1. At the bottom of the blog page there is pagination implemented so that the user can find older posts.
@@ -150,6 +151,7 @@ remove product from the bag, etc. It can be dismmissed by click on x symbol.
 1. Comments form fields are required: name, email and content of the comment and a submit button.
 1. After placing a comment the user must wait for the admin's approval in order to be published. This way the site`s owners will avoid spam messages.
 1. On top of the comments form there is a card where approved messages are displayed together with the post date and the user's name and messages count.
+-   ![home](static/testing/blog.jpg)
 ### Profiles app
 1. Registration form fields: Email, Email Confirmation, Username, Password and Password confirmation.
 1. Log in form fields: Username and Password.
@@ -169,6 +171,8 @@ remove product from the bag, etc. It can be dismmissed by click on x symbol.
         -   Items
         -   Order Total
 1. The profile information can also be stored when the user checks out. The checkbox at the bottom of the checkout form must be selected.
+-   ![profiles](static/testing/profile.jpg)
+-   ![Order History](static/testing/orderhistory.jpg)
 ### Products app
 The Products app has two basic html templates:
 1. Products page:
@@ -199,29 +203,32 @@ clicking the Keep Shopping button.
 1. If the user decides to keep shopping, the item/items already chosen remain saved into the bag until they are payed or removed from the bag.
 1. After selecting the amount and size of the products, the user can checkout by clicking on the Secure Checkout button from the shopping bag page.
 1. This button redirects the user to the checkout page.
+-   ![bag](static/testing/bag.jpg)
 ### Checkout app
-The Checkout page contains two cards:
-1. The Checkout Form which the user needs to complete in order to finalize the order purchase.
-    -   The form contains the following fields sets: 
-        1. User's Details:
-            -   Full Name
-            -   Email address
-            -   Telephone number
-        1. Delivery address details: 
-            -   Street Address 1
-            -   Street Address 2 (not required)
-            -   Town or City, County
-            -   State or Locality
-            -   Postal Code
-            -   Country
-        1. Payment field where the user can input the card number for validation.
-    -   At the bottom of the users's details fields there is a checkbox which if checked, it saves the info to the user's profile.
-    -   At the bottom of the checkout form the user can finalize the payment by clicking on the Complete Order button or adjust 
-    the bag by clicking on the Adjust Bag button which redirects the user to the Shopping Bag page.
-    -   Underneath the buttons there is an alert type of text reminding the user the amount of money the user will be charged.
-1. Order Summary with items number.
-    -   For each item added to the order: image, size, quantity and subtotal.
-    -   At the bottom of the summary: the Order Total, the Delivery Cost (if applicable), and the Grand Total.
+1. The Checkout page contains two cards:
+    1. The Checkout Form which the user needs to complete in order to finalize the order purchase.
+        -   The form contains the following fields sets: 
+            1. User's Details:
+                -   Full Name
+                -   Email address
+                -   Telephone number
+            1. Delivery address details: 
+                -   Street Address 1
+                -   Street Address 2 (not required)
+                -   Town or City, County
+                -   State or Locality
+                -   Postal Code
+                -   Country
+            1. Payment field where the user can input the card number for validation.
+        -   At the bottom of the users's details fields there is a checkbox which if checked, it saves the info to the user's profile.
+        -   At the bottom of the checkout form the user can finalize the payment by clicking on the Complete Order button or adjust 
+        the bag by clicking on the Adjust Bag button which redirects the user to the Shopping Bag page.
+        -   Underneath the buttons there is an alert type of text reminding the user the amount of money the user will be charged.
+    1. Order Summary with items number.
+        -   For each item added to the order: image, size, quantity and subtotal.
+        -   At the bottom of the summary: the Order Total, the Delivery Cost (if applicable), and the Grand Total.
+-   ![checkout](static/testing/checkout.jpg)
+-   ![Order Summary](static/testing/ordersummary.jpg)
 1. After clicking on the Secure Checkout button, the user get redirected to the checkout succes page and get a toast message with the confirmation
 that the order has been successfully processed and the order number.
 1. The Checkout Success page displays all the order's information: order number, date, purchased products, amount and size, adress and billing info as
