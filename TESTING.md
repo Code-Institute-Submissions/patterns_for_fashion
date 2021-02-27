@@ -180,8 +180,8 @@ During the deployment process when tried to push to heroku master I got this err
     -   $ heroku restart
 
 # Known Bugs
--   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. Whe adding the fixed-bottom bootstrap property, for some reason
-which I couldn't figure out, it hides the bottom content of the page. 
+-   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. When adding the fixed-bottom bootstrap property, for some reason
+I couldn't figure out, it hides the bottom content of the page. 
 
 <div align="right">
     <b><a href="#contents-testing">↥ Back To Top</a></b>
