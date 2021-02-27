@@ -35,6 +35,11 @@ TC021 | Test Blog Post detail page | Blog Post detail page displays all elements
 TC022 | Test Checkout Page | Checkout page displays all elements and all text sections are well distributed | Checkout page displays all elements and all text sections are well distributed | |
 TC023 | Test Checkout Succes | Displays Order information, sends email confirmation and shopping bag is updated to 0 products | Displays Order information, sends email confirmation and shopping bag is updated to 0 products | |
 
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
 
 ## User Experience Stories
 ### Viewing and Navigation
@@ -46,6 +51,13 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
     -   When a user adds a product to the shopping bag, there's a pop-up alert window displaying a list of the added products.
 1. As a buyer I want to able to view the history of my orders.
     -   At the bottom of the profile page there's a card containing the past user's orders.
+
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
+
 ### Registration and User Accounts
 1. As a buyer I want to be able to register for an account.
     -   The user can safely register in order to create an account when purchasing an item.
@@ -63,6 +75,13 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
 1. As a buyer I want to be able to have a personalized user profile.
     -   The user profile page displays a form where the user can enter personal information
     -   At the bottom of the form there is an order history card where the user can view the past orders if any.
+
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
+
 ### Sorting and Searching
 1. As a buyer I want to be able to search for a product by name or description.
     -   When the user enters a word in the search bar which is to be found in the product(s) description or name, than the page renders the specific product(s)
@@ -73,7 +92,14 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
     -   When the user enters a valid search word, the products page displays the specific product(s) and their amount. 
 1. As a buyer I want to be able to sort the products by categories, price and reviews.
     -   On the main navigation bar there is the filter link where the user can sort the products by categories alphabetically,
-    by price from the lowest to the highest or by reviews from the highest to the lowest. 
+    by price from the lowest to the highest or by reviews from the highest to the lowest.
+
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
+
 ### Purchasing and Checkout
 1. As a buyer I want to be able to select a specific size and the quantity for the product when I purchase it.
     -   There is a dropdown select field with the options fo the xs, s, m, l, xl sizes
@@ -88,6 +114,13 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
 1. As a buyer I want to be able to enter my payment information.
 1. As a buyer I want to be able to view an order confirmation after checkout and receive and email confirmation.
 1. As a buyer I want that my personal details and payment information is safe and secure.
+
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
+
 ### Admin and Store Management
 1. As the owner of the site I want to have the choice to add a product to the website directly from the site and not through admin.
     -   This feature is available only for the superuser.
@@ -95,6 +128,13 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
     ![Authentification alert message](static/testing/superuser.png)
 1. As the owner of the site I want to be able to edit/update/ or delete a product.
     -   Every product both on the all products page and product detail page has the edit/delete links available only when the superuser is authenticated.
+
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
+
 ### Blog 
 1. As a site visitor I want to be able to view the list of the latest news the site has to offer.
     -   The blog page renders 3 posts per page, the rest of the posts can be viewed by clicking on the NEXT/PREV button.
@@ -106,14 +146,45 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
     -   The comments are being moderated by the superuser from the admin panel.
     -   ![Comment Moderation](static/testing/comment.png)
 
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Validation
 -   [W3C Markup Validator](https://validator.w3.org/) 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
 -   [JavaScript Validator](https://jshint.com/) 
 -   [Python Validator](http://pep8online.com/) 
 # Further Testing
--   The website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+-   The website was tested on Google Chrome, Firefox and Microsoft Edge.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
 -   Friends and family members were asked to review the website to point out any bugs and/or user experience issues.
+
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Fixed Bugs
+During the deployment process when tried to push to heroku master I got this error.
+
+![Push Error](static/testing/pusherror.png)
+
+-   I got it fixed by typing the following commands which I found while googling the issue at this
+[link](https://codesource.io/ask/d/508-your-account-has-reached-its-concurrent-builds-limit)
+    -   $ heroku plugins:install heroku-builds
+    -   $ heroku builds:cancel
+    -   $ heroku restart
+
 # Known Bugs
+-   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. Whe adding the fixed-bottom bootstrap property, for some reason
+which I couldn't figure out, it hides the bottom content of the page. 
+
+<div align="right">
+    <b><a href="#contents-testing">↥ Back To Top</a></b>
+</div>
+
+---
