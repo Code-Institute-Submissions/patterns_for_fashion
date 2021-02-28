@@ -1,5 +1,5 @@
 # Patterns For Fashion
-The live website can be viewed [here]()
+The live website can be viewed [here](https://patterns-for-fashion.herokuapp.com/)
 
 ![Mock-up](static/assets/images/readme/mock-up.png)
 
@@ -27,6 +27,8 @@ for the users to order garments on custom sizes.
 1. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     1. [Frameworks and Libraries](#frameworks-and-libraries)
+    1. [Packages](#packages)
+    1. [Databases](#databases)
 1. [Testing](#testing)
 1. [Deployment](#deployment)
 1. [Credits](#credits)
@@ -289,23 +291,23 @@ well the text reminding the user that the confirmation email was send to the inp
 
 ## Packages
 1. [boto3](https://pypi.org/project/boto3/)
--   Boto3 is the AWS Software Development Kit (SDK) for Python, which allows Python developers to write
+    -   Boto3 is the AWS Software Development Kit (SDK) for Python, which allows Python developers to write
 software that makes use of services like Amazon S3 and Amazon EC2.
 1. [django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html)
--   django-allauth is a prebuild-package used for setting the authentication system.
+    -   django-allauth is a prebuild-package used for setting the authentication system.
 1. [django-countries](https://pypi.org/project/django-countries/)
--   django-countries is a package that contains a pre-built country field with all the valid country codes.
+    -   django-countries is a package that contains a pre-built country field with all the valid country codes.
 1. [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
--   django-crispy-forms package was used to style the forms for the website.
+    -   django-crispy-forms package was used to style the forms for the website.
 1. [django-storages](https://django-storages.readthedocs.io/en/latest/)
--   django-storages is a collection of custom storage backends for Django.
+    -   django-storages is a collection of custom storage backends for Django.
 1. [gunicorn](https://gunicorn.org/)
--   Gunicorn is a Web Server Gateway Interface (WSGI) server implementation that is used
+    -   Gunicorn is a Web Server Gateway Interface (WSGI) server implementation that is used
 to run Python web applications. Was used to replace the development server once the app was deployed to Heroku.
 1. [pillow](https://pypi.org/project/Pillow/)
--   The Python Imaging Library adds image processing capabilities to your Python interpreter. It was installed in order to be able to use the image filed.
+    -   The Python Imaging Library adds image processing capabilities to your Python interpreter. It was installed in order to be able to use the image filed.
 1. [psycopg2](https://pypi.org/project/psycopg2/)
--   Psycopg is the most popular PostgreSQL database adapter for the Python programming language. It was installed in order to be able to use the Postres in the application.
+    -   Psycopg is the most popular PostgreSQL database adapter for the Python programming language. It was installed in order to be able to use the Postres in the application.
 
 ## Databases
 -   [SQlite3](https://www.sqlite.org/index.html) database used for development
