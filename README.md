@@ -98,8 +98,9 @@ All images used for the ads posted in the website were taken by the developer an
 Patterns 4 Fashion website is designed to give users easy access to information, simple navigation paths, clear feedback for all meaningful actions
 and safe and secured personal data storage. The site contains 6 applications: bag, blog, checkout, home, products and profiles.
 ### Navbar
-1. Responsiveness on different device sizes.1. Toast messages: Pop-up window for confirmation messages following commands as registration, logging in, logging out, add product to bag,
-remove product from the bag, etc. It can be dismmissed by click on x symbol.
+1. Responsiveness on different device sizes.
+1. Toast messages: Pop-up window for confirmation messages following commands as registration, logging in, logging out, add product to bag,
+    remove product from the bag, etc. It can be dismissed by click on x symbol.
 1. The navigation bar functions on two levels:
     -   1. Top navigation bar for desktop view and mobile view
     -   1. Main navigation bar for desktop and mobile view
@@ -523,23 +524,36 @@ for more detailed explanations of the above process.
 
 # Credits
 ## Photos
+
 Photos are taken by the developer and are used for educational purposes only.
+
 ## Code
-Code for the website was written following the Boutique Ado project tutorials from Code Institute.
-Inspiration from the following links as stated:
--   [Dropdown select images](https://www.w3schools.com/howto/howto_js_dropdown.asp)
--   [JavaScript for update year in the footer copyright section.](https://stackoverflow.com/questions/4562587/shortest-way-to-print-current-year-in-a-website)
--   [Summary tag in the info card on index.html](https://www.w3schools.com/tags/tag_summary.asp)
--   [Read More functionality from info card on index.html](https://www.w3schools.com/howto/howto_js_read_more.asp)
--   [Bootstrap Address Example](https://www.w3resource.com/twitter-bootstrap/examples/twitter-bootstrap-address-example.php)
--   [Blog tutorial](https://djangocentral.com/building-a-blog-application-with-django/)
--   [Creating comments-system with django for the blog](https://djangocentral.com/creating-comments-system-with-django/)
--   [Blog Post Page Pagination](https://djangocentral.com/adding-pagination-with-django/)
--   [Full Screen Carousel on mobile](https://stackoverflow.com/questions/58760217/how-to-make-navbar-and-carousel-combined-always-full-screen/58765043#58765043)
+-   The project was developed while following the Boutique Ado tutorials from Code Institute
+-   Inspiration from the following links as stated:
+    -   [Dropdown select images](https://www.w3schools.com/howto/howto_js_dropdown.asp)
+    -   [JavaScript for update year in the footer copyright section.](https://stackoverflow.com/questions/4562587/shortest-way-to-print-current-year-in-a-website)
+    -   [Summary tag in the info card on index.html](https://www.w3schools.com/tags/tag_summary.asp)
+    -   [Read More functionality from info card on index.html](https://www.w3schools.com/howto/howto_js_read_more.asp)
+    -   [Bootstrap Address Example](https://www.w3resource.com/twitter-bootstrap/examples/twitter-bootstrap-address-example.php)
+    -   [Blog tutorial](https://djangocentral.com/building-a-blog-application-with-django/)
+    -   [Creating comments-system with django for the blog](https://djangocentral.com/creating-comments-system-with-django/)
+    -   [Blog Post Page Pagination](https://djangocentral.com/adding-pagination-with-django/)
+    -   [Full Screen Carousel on mobile](https://stackoverflow.com/questions/58760217/how-to-make-navbar-and-carousel-combined-always-full-screen/58765043#58765043)
 ## Tutor Support
+
+Special Thanks to tutor support team for all the patience and valuable support.
+
 ## Mentor
-## Slack Comunity
+
+Big thank you to my mentor Dick Vlaanderen for his helpful feedback, support and valuable guidance with UX experience. 
+
+## Slack Community
+
+Big hug and lots of thanks to slack community for the mental support and all the time saving for finding the right solution to most of the issues I had on the way.
+
 ## My Family
+
+For giving me the space and time to be able to focus on the learning process.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
