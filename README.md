@@ -483,9 +483,9 @@ for more detailed explanations of the above process.
 1. Create your Procfile to tell Heroku to create a web dyno.
     -   ![gunicorn](static/deployment/gunicorn.png)
 1. Temporarily disable collectstatic So that Heroku won't try to collect static files when YOU deploy.
-    -   $ heroku config:set DISABLE_COLLECTSTATI=1 --app yourapp name
+    -   $ heroku config:set DISABLE_COLLECTSTATIC=1 --app your-app-name
 1. In settings.py add to allowed hosts the hostname of your Heroku app and local host as well.
-    -   ALLOWED_HOSTS = ['your herokuaap name.herokuapp.com', 'localhost']
+    -   ALLOWED_HOSTS = ['your-herokuaap-name.herokuapp.com', 'localhost']
 1. Commit all your changes and push to github
     -   $ git add .
     -   $ git commit -m "Your commit name" 
