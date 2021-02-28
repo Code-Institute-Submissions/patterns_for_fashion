@@ -156,7 +156,10 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
 -   [W3C Markup Validator](https://validator.w3.org/) 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
 -   [JavaScript Validator](https://jshint.com/) 
--   [Python Validator](http://pep8online.com/) 
+-   [Python Validator](http://pep8online.com/)
+-   [flake8](https://flake8.pycqa.org/en/latest/) - Checked the issues by running the $ python3 - m flake8 command in the terminal.
+    -   "Avoid using null=True on string-based fields such CharField" was a main issue which came quite often, fixed where possible.
+    -   "E501 line too long" issue also a frequent issue. Fixed where possible.
 # Further Testing
 -   The website was tested on Google Chrome, Firefox and Microsoft Edge.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
