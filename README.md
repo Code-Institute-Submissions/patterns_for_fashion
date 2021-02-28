@@ -457,7 +457,8 @@ $ git clone https://github.com/mihaelasandrea/patterns_for_fashion
 > Unpacking objects: 100% (10/10), done.
 ```
 
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) 
+for more detailed explanations of the above process.
 ## Deploying to Heroku
 1. If you don't have a [Heroku](https://heroku.com/) account, create a new one and make sure that you choose Python as Primary Development Language.
 1. Login to Heroku and create new app by clicking the button "New" > "Create New App".
@@ -506,8 +507,13 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 1. Set debug to be true only if there's a variable called development in the environment.
     -   DEBUG = 'DEVELOPMENT' in os.environ
 
-
-
+## AWS account setup
+1. You need to create a AWS account. You need toenter a credit card number which will be used for billing
+    if you go above the free usage limits. You should thoroughly research and understand the costs.
+1. After signing in your account, in the Service tab search for the s3 and create a new bucket and name it to match your Heroku app.
+1. Select the region closest to you.
+1. Unblok public access and click create bucket.
+1. More on setting up the static files and images with AWS on this [tutorial](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html)
 
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
