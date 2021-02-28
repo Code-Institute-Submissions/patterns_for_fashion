@@ -1,7 +1,7 @@
 # Patterns For Fashion
 The live website can be viewed [here](https://patterns-for-fashion.herokuapp.com/)
 
-![Mock-up](static/assets/images/readme/mock-up.png)
+![Mock-up](static/mockup.png)
 
 The purpose of creating this website is building an e-commerce store using Django, Postgres and Stripe payments. Users can purchase products after authenticating.
 
@@ -430,6 +430,84 @@ Friendly name | friendly_name | CharField | max_length=254, null=True, blank=Tru
 ---
 
 # Deployment
+-   The Patterns 4 Fashion website was created on GitPod online IDE and using Git & GitHub for version control.
+-   It has been deployed to Heroku hosting platform using the AWS s3 bucket for uploaded images and static files.
+-   Stripe and Gmail accounts are necessary to create for completing this project.
+## Cloning the repository
+1. Log in to GitHub and locate the [Patterns for Fashion GitHub Repository](https://github.com/mihaelasandrea/patterns_for_fashion)
+1. Under the repository name, click "Clone or download".
+    -   ![Cloning](static/deployment/cloning.png)
+1. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+1. Open Git Bash
+1. Change the current working directory to the location where you want the cloned directory to be made.
+1. Type `git clone`, and then paste the URL you copied in Step 3.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/second-choice
+```
+
+1. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/mihaelasandrea/patterns_for_fashion
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop)
+## Deploying to Heroku
+1. If you don't have a [Heroku](https://heroku.com/) account, create a new one and make sure that you choose Python as Primary Development Language.
+1. Login to Heroku and create new app by clicking the button "New" > "Create New App".
+    -   ![Create New App](static/deployment/newapp.png)
+1. Give the app an unique name, select your closest region and click "Create App".
+1. On the Resources button select a new Postgres database.
+    -   ![Postgres](static/deployment/postgres.png)
+1. Back in your GitPod install dj_database_url, and psycopg2 by typing the following commands:
+    -   $ pip3 install dj_database_url
+    -   $ pip3 install psycopg2-binary
+1. Freeze the requirements
+    -   $ pip3 freeze > requirements.txt
+1. In projects' setting.py file import dj_database_url and make sure you don't forget to run migrations for the new database.
+1. Create superuser 
+    -   $ python3 manage.py createsuperuser
+1. In setting.py you need an if statement so that when your app is running on Heroku
+    where the database URL environment variable should be defined.
+    -   ![Database if statement](static/deployment/database.png)
+1. Then you need to instal gunicorn
+    -   $ pip3 install gunicorn
+    -   $ pip3 freeze > requirements.txt
+1. Create your Procfile to tell Heroku to create a web dyno.
+    -   ![gunicorn](static/deployment/gunicorn.png)
+1. Temporarily disable collectstatic So that Heroku won't try to collect static files when YOU deploy.
+    -   $ heroku config:set DISABLE_COLLECTSTATI=1 --app yourapp name
+1. In settings.py add to allowed hosts the hostname of your Heroku app and local host as well.
+    -   ALLOWED_HOSTS = ['your herokuaap name.herokuapp.com', 'localhost']
+1. Commit all your changes and push to github
+    -   $ git add .
+    -   $ git commit -m "Your commit name" 
+    -   $ git push
+1. Before deploying to Heroku you may need to initialize your Heroku git remote if you created your app on the website rather than with the CLI
+    -   $ heroku git:remote -a your-app-name
+1. Deploy to Heroku
+    -   $ git push heroku master
+1. Set to automatically deploy to Heroku when you push to github.
+    -   On the Deploy tab set it to connect to GitHub.
+    -   Search for your repository
+    -   Click connect
+    -   Enable automatic deploys
+1. Add your config vars
+    -   SECRET_KEY ('YOUR_SECRET_KEY')
+    -   STRIPE_PUBLIC_KEY ('YOUR_STRIPE_PUBLIC_KEY')
+    -   STRIPE_SECRET_KEY ('YOUR_STRIPE_SECRET_KEY')
+    -   STRIPE_WH_SECRET ('YOUR_STRIPE_WH_SECRET')
+1. Set debug to be true only if there's a variable called development in the environment.
+    -   DEBUG = 'DEVELOPMENT' in os.environ
+
+
+
 
 <div align="right">
     <b><a href="#table-of-contents">↥ Back To Top</a></b>
