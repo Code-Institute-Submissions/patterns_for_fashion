@@ -172,15 +172,26 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
 ---
 
 # Fixed Bugs
-During the deployment process when tried to push to heroku master I got this error.
+1. During the deployment process when tried to push to heroku master I got this error.
 
-![Push Error](static/testing/pusherror.png)
+    -   ![Push Error](static/testing/pusherror.png)
 
--   I got it fixed by typing the following commands which I found while googling the issue at this
-[link](https://codesource.io/ask/d/508-your-account-has-reached-its-concurrent-builds-limit)
-    -   $ heroku plugins:install heroku-builds
-    -   $ heroku builds:cancel
-    -   $ heroku restart
+    -   I got it fixed by typing the following commands which I found while googling the issue at this [link](https://codesource.io/ask/d/508-your-account-has-reached-its-concurrent-builds-limit)
+
+    ```
+    $ heroku plugins:install heroku-builds
+    $ heroku builds:cancel
+    $ heroku restart
+    ```
+
+1. When trying to add a blog post to the deployed site on Heroku, I got a 500 Internal Server Error. Locally everything was working fine.
+    -   I added the postgres database url to the GitHub env var in order to get a better understanding of the issue and found the following error.
+    -   ![Blog Error](static/testing/blogerror.png)
+    -   The problem was that when I initially migrated the blog models fields, the created_on field was interpreted as IntegerField instead of DAaeTimeFieled.
+    -   I fixed the issue locally in the migrations file by simply adding the correct field type(DateTimeFieled) and rerun migrations.
+    -   While in development this worked just fine, in production Django didn't pick up the migration as well, therefore the error.
+    -   I fixed it by completely remove the created_on field from the models locally, run migrations, and then added it again with the null=True default and run migrations again.
+    -   After checking that the field works fine locally, I run migrations also for postgres database which fixed the error.
 
 # Known Bugs
 -   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. When adding the fixed-bottom bootstrap property, for some reason

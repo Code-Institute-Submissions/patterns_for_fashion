@@ -349,7 +349,7 @@ Slug | slug | SlugField | max_length=200, unique=True
 Author | author | ForeignKey | on_delete=models.CASCADE, related_name='blog_posts'
 Updated on | updated_on | DateTimeField | auto_now=True
 Content | content | TextField |
-Created on | created_on | DateTimeField | auto_now_add=True
+Created on | created_on | DateTimeField | auto_now_add=True, null=True
 Status | status | IntegerField | choices=STATUS, default=0
 
 ### Comment
@@ -444,20 +444,20 @@ Testing section is displayed in an external file [TESTING.md](TESTING.md)
 1. Change the current working directory to the location where you want the cloned directory to be made.
 1. Type `git clone`, and then paste the URL you copied in Step 3.
 
-```
-$ git clone https://github.com/YOUR-USERNAME/second-choice
-```
+    ```
+    $ git clone https://github.com/YOUR-USERNAME/second-choice
+    ```
 
 1. Press Enter. Your local clone will be created.
 
-```
-$ git clone https://github.com/mihaelasandrea/patterns_for_fashion
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
+    ```
+    $ git clone https://github.com/mihaelasandrea/patterns_for_fashion
+    > Cloning into `CI-Clone`...
+    > remote: Counting objects: 10, done.
+    > remote: Compressing objects: 100% (8/8), done.
+    > remove: Total 10 (delta 1), reused 10 (delta 1)
+    > Unpacking objects: 100% (10/10), done.
+    ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) 
 for more detailed explanations of the above process.
@@ -470,69 +470,69 @@ for more detailed explanations of the above process.
     -   ![Postgres](static/deployment/postgres.png)
 1. Back in your GitPod install dj_database_url, and psycopg2 by typing the following commands:
 
-```
-$ pip3 install dj_database_url
-```
+    ```
+    $ pip3 install dj_database_url
+    ```
 
-```
-$ pip3 install psycopg2-binary
-```
+    ```
+    $ pip3 install psycopg2-binary
+    ```
 
 1. Freeze the requirements
 
-```
-$ pip3 freeze > requirements.txt
-```
+    ```
+    $ pip3 freeze > requirements.txt
+    ```
 
 1. In projects' settings.py file import dj_database_url and make sure you don't forget to run migrations for the new database.
 1. Create superuser
 
-```
-$ python3 manage.py createsuperuser
-```
+    ```
+    $ python3 manage.py createsuperuser
+    ```
 
 1. In settings.py you need an if statement so that when your app is running on Heroku
     where the database URL environment variable should be defined.
     -   ![Database if statement](static/deployment/database.png)
 1. Then you need to instal gunicorn
 
-```
-$ pip3 install gunicorn
-```
+    ```
+    $ pip3 install gunicorn
+    ```
 
-```
-$ pip3 freeze > requirements.txt
-```
+    ```
+    $ pip3 freeze > requirements.txt
+    ```
 
 1. Create your Procfile to tell Heroku to create a web dyno.
     -   ![gunicorn](static/deployment/gunicorn.png)
 1. Temporarily disable collectstatic So that Heroku won't try to collect static files when YOU deploy.
 
-```
-$ heroku config:set DISABLE_COLLECTSTATIC=1 --app your-app-name
-```
+    ```
+    $ heroku config:set DISABLE_COLLECTSTATIC=1 --app your-app-name
+    ```
 
 1. In settings.py add to allowed hosts the hostname of your Heroku app and local host as well.
     -   ALLOWED_HOSTS = ['your-herokuaap-name.herokuapp.com', 'localhost']
 1. Commit all your changes and push to github
 
-```
-$ git add .
-$ git commit -m "Your commit name" 
-$ git push
-```
+    ```
+    $ git add .
+    $ git commit -m "Your commit name" 
+    $ git push
+    ```
 
 1. Before deploying to Heroku you may need to initialize your Heroku git remote if you created your app on the website rather than with the CLI
 
-```
-$ heroku git:remote -a your-app-name
-```
+    ```
+    $ heroku git:remote -a your-app-name
+    ```
 
 1. Deploy to Heroku
 
-```
-$ git push heroku master
-```
+    ```
+    $ git push heroku master
+    ```
 
 1. Set to automatically deploy to Heroku when you push to github.
     -   On the Deploy tab set it to connect to GitHub.
