@@ -20,7 +20,7 @@
                 <div class="card shadow-lg mb-4">
                     <div class="card-body ml-md-5 mr-md-5">
                         <a href="{% url 'post_detail' post.slug %}">
-                            <img src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.name }}" class="img-fluid mx-auto d-block">
+                            <img src="{{ post.image.url }}" alt="{{ post.name }}" class="img-fluid mx-auto d-block">
                         </a>
                         <small class="text-muted"><em>published on {{ post.created_on }}</em></small>
                         <h1 class="text-center my-5">{% block title %} {{ post.title }} {% endblock title %}</h1>
