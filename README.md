@@ -29,6 +29,7 @@ for the users to order garments on custom sizes.
     1. [Frameworks and Libraries](#frameworks-and-libraries)
     1. [Packages](#packages)
     1. [Databases](#databases)
+1. [Database Models](#database-models)
 1. [Testing](#testing)
 1. [Deployment](#deployment)
 1. [Credits](#credits)
@@ -36,7 +37,7 @@ for the users to order garments on custom sizes.
     1. [Code](#code)
     1. [Tutor Support](#tutor-support)
     1. [Mentor](#mentor)
-    1. [Slack Comunity](#slack-comunity)
+    1. [Slack Community](#slack-community)
     1. [My Family](#my-family)
 
 # User Experience
@@ -320,17 +321,6 @@ to run Python web applications. Was used to replace the development server once 
 
 ---
 
-# Testing
-
-Testing section is displayed in an external file [TESTING.md](TESTING.md)
-
-
-<div align="right">
-    <b><a href="#table-of-contents">↥ Back To Top</a></b>
-</div>
-
----
-
 # Database Models
 ![datamodelling](static/datamodelling/datamodelling.png)
 
@@ -430,6 +420,17 @@ Friendly name | friendly_name | CharField | max_length=254, null=True, blank=Tru
 
 ---
 
+# Testing
+
+Testing section is displayed in an external file [TESTING.md](TESTING.md)
+
+
+<div align="right">
+    <b><a href="#table-of-contents">↥ Back To Top</a></b>
+</div>
+
+---
+
 # Deployment
 -   The Patterns 4 Fashion website was created on GitPod online IDE and using Git & GitHub for version control.
 -   It has been deployed to Heroku hosting platform using the AWS s3 bucket for uploaded images and static files.
@@ -468,33 +469,71 @@ for more detailed explanations of the above process.
 1. On the Resources button select a new Postgres database.
     -   ![Postgres](static/deployment/postgres.png)
 1. Back in your GitPod install dj_database_url, and psycopg2 by typing the following commands:
-    -   $ pip3 install dj_database_url
-    -   $ pip3 install psycopg2-binary
+
+```
+$ pip3 install dj_database_url
+```
+
+```
+$ pip3 install psycopg2-binary
+```
+
 1. Freeze the requirements
-    -   $ pip3 freeze > requirements.txt
-1. In projects' setting.py file import dj_database_url and make sure you don't forget to run migrations for the new database.
-1. Create superuser 
-    -   $ python3 manage.py createsuperuser
-1. In setting.py you need an if statement so that when your app is running on Heroku
+
+```
+$ pip3 freeze > requirements.txt
+```
+
+1. In projects' settings.py file import dj_database_url and make sure you don't forget to run migrations for the new database.
+1. Create superuser
+
+```
+$ python3 manage.py createsuperuser
+```
+
+1. In settings.py you need an if statement so that when your app is running on Heroku
     where the database URL environment variable should be defined.
     -   ![Database if statement](static/deployment/database.png)
 1. Then you need to instal gunicorn
-    -   $ pip3 install gunicorn
-    -   $ pip3 freeze > requirements.txt
+
+```
+$ pip3 install gunicorn
+```
+
+```
+$ pip3 freeze > requirements.txt
+```
+
 1. Create your Procfile to tell Heroku to create a web dyno.
     -   ![gunicorn](static/deployment/gunicorn.png)
 1. Temporarily disable collectstatic So that Heroku won't try to collect static files when YOU deploy.
-    -   $ heroku config:set DISABLE_COLLECTSTATIC=1 --app your-app-name
+
+```
+$ heroku config:set DISABLE_COLLECTSTATIC=1 --app your-app-name
+```
+
 1. In settings.py add to allowed hosts the hostname of your Heroku app and local host as well.
     -   ALLOWED_HOSTS = ['your-herokuaap-name.herokuapp.com', 'localhost']
 1. Commit all your changes and push to github
-    -   $ git add .
-    -   $ git commit -m "Your commit name" 
-    -   $ git push
+
+```
+$ git add .
+$ git commit -m "Your commit name" 
+$ git push
+```
+
 1. Before deploying to Heroku you may need to initialize your Heroku git remote if you created your app on the website rather than with the CLI
-    -   $ heroku git:remote -a your-app-name
+
+```
+$ heroku git:remote -a your-app-name
+```
+
 1. Deploy to Heroku
-    -   $ git push heroku master
+
+```
+$ git push heroku master
+```
+
 1. Set to automatically deploy to Heroku when you push to github.
     -   On the Deploy tab set it to connect to GitHub.
     -   Search for your repository
