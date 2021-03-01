@@ -12,28 +12,30 @@
 **Test Case** | **Description** | **Expected Results** | **Actual Results** | **Pass/Fail** | **Comments**
 --- | --- | --- | --- | --- | ---
 TC001 | Test Website responsiveness on all screen sizes on chrome browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
-TC002 | Test Website responsiveness on all screen sizes on firefox browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
+TC002 | Test Website responsiveness on all screen sizes on firefox browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Fail |See [known bugs section](#known-bugs)
 TC003 | Test Website responsiveness on all screen sizes on microsoft edge browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
-TC004 | Test Filter link from the main navigation bar by price, rating, category and all garments | Links work well and filter products accordingly | Links work well and filter products accordingly | |
-TC005 | Test Dresses link | Link works well and displays all products from the Dresses category | Link works well and displays all products from the Dresses category | |
-TC006 | Test Shirts link from the main navigation bar | Link works well and displays all products from the Shirts category | Link works well and displays all products from the Shirts category | |
-TC007 | Test All garments link from the main navigation bar | Link works well and displays all products | Link works well and displays all products | |
-TC008 | Test logo image from the top navigation bar | The logo image redirects the user to home page from all other pages | The logo image redirects the user to home page from all other pages | |
-TC009 | Test search bar on desktop and mobile | Searchbar renders the product(s) which contain the searched word in the product's name or description | Searchbar renders the product(s) which contain the searched word in the product's name or description | |
-TC010 | Test home page link | Link redirects to the home page when clicked from all other pages | Link redirects to the home page when clicked from all other pages | |
-TC011 | Test blog page link | Link redirects to the blog page when clicked from all other pages | Link redirects to the blog page when clicked from all other pages | |
-TC012 | Test My PFF dropdown link | Link reveals the dropdown list of profile/registration/login links | Link reveals the dropdown list of profile/registration/login links | |
-TC013 | Test My profile page | When clicked, the link redirects to the profile page | When clicked, the link redirects to the profile page | |
-TC014 | Test Logout function | When clicked the user get redirected to the sign out page and asked yes/no confirmation | When clicked the user get redirected to the sign out page and asked yes/no confirmation | |
-TC015 | Test Signout page | If the user confirms to sign out after clicking yes button it redirects to home page and the dropdown list reveals login/register instead of profile/logout links | If the user confirms to sign out after clicking yes button it redirects to home page and the dropdown list reveals login/register instead of profile/logout links | |
-TC016 | Test Register page | Redirects to the register form | Redirects to the register form | |
-TC017 | Test Login page | Redirects to the login form from the dropdownlink in the topnavbar as well as from the bottom of the register form | Redirects to the login form the dropdownlink in the topnavbar as well as from the bottom of the register form | |
-TC018 | Test Shopping Bag | When clicked redirects to the shopping bag page from all other pages and displays all elements and no distorted images | When clicked redirects to the shopping bag page from all other pages and displays all elements and no distorted images | |
-TC019 | Test Footer section | Displays at the bottom of all pages | Displays at the bottom of all pages | | See [known bugs section](#known-bugs)
-TC020 | Test Product detail page |  Product detail page displays all elements and no distorted images when clicked on an individual product | Product detail page displays all elements and no distorted images when clicked on an individual product | |
-TC021 | Test Blog Post detail page | Blog Post detail page displays all elements and no distorted images when clicked on an individual blog post | Blog Post detail page displays all elements and no distorted images when clicked on an individual blog post | |
-TC022 | Test Checkout Page | Checkout page displays all elements and all text sections are well distributed | Checkout page displays all elements and all text sections are well distributed | |
-TC023 | Test Checkout Succes | Displays Order information, sends email confirmation and shopping bag is updated to 0 products | Displays Order information, sends email confirmation and shopping bag is updated to 0 products | |
+TC004 | Test Filter link from the main navigation bar by price, rating, category and all garments | Links work well and filter products accordingly | Links work well and filter products accordingly | Pass |
+TC005 | Test Dresses link | Link works well and displays all products from the Dresses category | Link works well and displays all products from the Dresses category | Pass |
+TC006 | Test Shirts link from the main navigation bar | Link works well and displays all products from the Shirts category | Link works well and displays all products from the Shirts category | Pass |
+TC007 | Test All garments link from the main navigation bar | Link works well and displays all products | Link works well and displays all products | Pass |
+TC008 | Test logo image from the top navigation bar | The logo image redirects the user to home page from all other pages | The logo image redirects the user to home page from all other pages | Pass |
+TC009 | Test search bar on desktop and mobile | Searchbar renders the product(s) which contain the searched word in the product's name or description | Searchbar renders the product(s) which contain the searched word in the product's name or description | Pass |
+TC010 | Test home page link | Link redirects to the home page when clicked from all other pages | Link redirects to the home page when clicked from all other pages | Pass |
+TC011 | Test blog page link | Link redirects to the blog page when clicked from all other pages | Link redirects to the blog page when clicked from all other pages | Pass |
+TC012 | Test My PFF dropdown link | Link reveals the dropdown list of profile/registration/login links | Link reveals the dropdown list of profile/registration/login links | Pass |
+TC013 | Test My profile page | When clicked, the link redirects to the profile page | When clicked, the link redirects to the profile page | Pass |
+TC014 | Test Logout function | When clicked the user get redirected to the sign out page and asked yes/no confirmation | When clicked the user get redirected to the sign out page and asked yes/no confirmation | Pass |
+TC015 | Test Signout page | If the user confirms to sign out after clicking yes button it redirects to home page and the dropdown list reveals login/register instead of profile/logout links | If the user confirms to sign out after clicking yes button it redirects to home page and the dropdown list reveals login/register instead of profile/logout links | Pass |
+TC016 | Test Register page | Redirects to the register form | Redirects to the register form | Pass |
+TC017 | Test Login page | Redirects to the login form from the dropdownlink in the topnavbar as well as from the bottom of the register form | Redirects to the login form the dropdownlink in the topnavbar as well as from the bottom of the register form | Pass |
+TC018 | Test Shopping Bag | When clicked redirects to the shopping bag page from all other pages and displays all elements and no distorted images | When clicked redirects to the shopping bag page from all other pages and displays all elements and no distorted images | Pass |
+TC019 | Test Footer section | Displays at the bottom of all pages | Displays at the bottom of all pages | Pass | See [known bugs section](#known-bugs)
+TC020 | Test Product detail page |  Product detail page displays all elements and no distorted images when clicked on an individual product | Product detail page displays all elements and no distorted images when clicked on an individual product | Pass |
+TC021 | Test Blog Post detail page | Blog Post detail page displays all elements and no distorted images when clicked on an individual blog post | Blog Post detail page displays all elements and no distorted images when clicked on an individual blog post | Pass |
+TC022 | Test Checkout Page | Checkout page displays all elements and all text sections are well distributed | Checkout page displays all elements and all text sections are well distributed | Pass |
+TC023 | Test Checkout Success | Displays Order information, sends email confirmation and shopping bag is updated to 0 products | Displays Order information, sends email confirmation and shopping bag is updated to 0 products | Pass |
+TC024 | Test Add Blog Post | Successfully adds blog post with image, title, content, created date | Successfully adds blog post with image, title, content, created date | Pass |
+TC025 | Test Add Blog Comment | Successfully adds blog comments with name, email, content, created date | Successfully adds blog comments with name, email, content, created date | Pass |
 
 <div align="right">
     <b><a href="#contents-testing">↥ Back To Top</a></b>
@@ -196,6 +198,7 @@ TC023 | Test Checkout Succes | Displays Order information, sends email confirmat
 # Known Bugs
 -   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. When adding the fixed-bottom bootstrap property, for some reason
 I couldn't figure out, it hides the bottom content of the page. 
+-   The logo image displays enlarged and pixalated on FireFox browser. It is a known issue for FireFox browser for logo imgage display and none of the found solutions worked yet.
 
 <div align="right">
     <b><a href="#contents-testing">↥ Back To Top</a></b>
