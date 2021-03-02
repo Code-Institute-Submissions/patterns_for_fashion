@@ -194,6 +194,9 @@ TC025 | Test Add Blog Comment | Successfully adds blog comments with name, email
     -   While in development this worked just fine, in production Django didn't pick up the migration as well, therefore the error.
     -   I fixed it by completely remove the created_on field from the models locally, run migrations, and then added it again with the null=True default and run migrations again.
     -   After checking that the field works fine locally, I run migrations also for postgres database which fixed the error.
+1. In the production mode images from the blog posts displayed only when debug was set to true.
+    -   The problem was the way the images were rendered in blog.html and post_detail.html.
+    -   I replaced the syntax {{ MEDIA_URL }}{{ post.image }} to {{ product.image.url }}
 
 # Known Bugs
 -   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. When adding the fixed-bottom bootstrap property, for some reason
