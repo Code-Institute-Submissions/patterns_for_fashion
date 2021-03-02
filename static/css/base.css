@@ -407,10 +407,6 @@ input[name='q']::placeholder {
         font-size: 90%;
     }
 
-    .container-fluid {
-        padding-bottom: -20px;
-    }
-
     .carousel-item > img {
         object-fit: cover;
         height: calc(100vh - 380px);

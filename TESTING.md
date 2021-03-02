@@ -14,6 +14,7 @@
 TC001 | Test Website responsiveness on all screen sizes on chrome browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
 TC002 | Test Website responsiveness on all screen sizes on firefox browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Fail |See [known bugs section](#known-bugs)
 TC003 | Test Website responsiveness on all screen sizes on microsoft edge browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
+TC003 | Test Website responsiveness on all screen sizes on opera browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
 TC004 | Test Filter link from the main navigation bar by price, rating, category and all garments | Links work well and filter products accordingly | Links work well and filter products accordingly | Pass |
 TC005 | Test Dresses link | Link works well and displays all products from the Dresses category | Link works well and displays all products from the Dresses category | Pass |
 TC006 | Test Shirts link from the main navigation bar | Link works well and displays all products from the Shirts category | Link works well and displays all products from the Shirts category | Pass |
@@ -155,15 +156,15 @@ TC025 | Test Add Blog Comment | Successfully adds blog comments with name, email
 ---
 
 # Validation
--   [W3C Markup Validator](https://validator.w3.org/) 
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
--   [JavaScript Validator](https://jshint.com/) 
+-   [W3C Markup Validator](https://validator.w3.org/) Pass
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) Pass
+-   [JavaScript Validator](https://jshint.com/) Pass
 -   [Python Validator](http://pep8online.com/)
--   [flake8](https://flake8.pycqa.org/en/latest/) - Checked the issues by running the $ python3 - m flake8 command in the terminal.
-    -   "Avoid using null=True on string-based fields such CharField" was a main issue which came quite often, fixed where possible.
-    -   "E501 line too long" issue also a frequent issue. Fixed where possible.
+    -   Checked the issues by running the $ python3 - m flake8 command in the terminal.
+        -   "Avoid using null=True on string-based fields such CharField" was a main issue which came quite often, fixed where possible.
+        -   "E501 line too long" issue also a frequent issue. Fixed where possible.
 # Further Testing
--   The website was tested on Google Chrome, Firefox and Microsoft Edge.
+-   The website was tested on Google Chrome, Firefox, Microsoft Edge and Opera browsers
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
 -   Friends and family members were asked to review the website to point out any bugs and/or user experience issues.
 
