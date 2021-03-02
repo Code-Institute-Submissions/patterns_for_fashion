@@ -201,7 +201,7 @@ TC025 | Test Add Blog Comment | Successfully adds blog comments with name, email
 # Known Bugs
 -   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. When adding the fixed-bottom bootstrap property, for some reason
 I couldn't figure out, it hides the bottom content of the page. 
--   The logo image displays enlarged and pixalated on FireFox browser. It is a known issue for FireFox browser for logo image display and none of the found solutions worked yet.
+-   The logo image displays enlarged and pixelated on FireFox browser. It is a known issue for FireFox browser for logo image display and none of the found solutions worked yet.
 
 <div align="right">
     <b><a href="#contents-testing">↥ Back To Top</a></b>

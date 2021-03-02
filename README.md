@@ -35,6 +35,7 @@ for the users to order garments on custom sizes.
 1. [Credits](#credits)
     1. [Photos](#photos)
     1. [Code](#code)
+    1. [Text](#text)
     1. [Tutor Support](#tutor-support)
     1. [Mentor](#mentor)
     1. [Slack Community](#slack-community)
@@ -578,6 +579,10 @@ Photos are taken by the developer and are used for educational purposes only.
     -   [Creating comments-system with django for the blog](https://djangocentral.com/creating-comments-system-with-django/)
     -   [Blog Post Page Pagination](https://djangocentral.com/adding-pagination-with-django/)
     -   [Full Screen Carousel on mobile](https://stackoverflow.com/questions/58760217/how-to-make-navbar-and-carousel-combined-always-full-screen/58765043#58765043)
+## Text
+
+Pieces of text were taken and adapted in one of the blog posts from this [link](https://www.thegoodtrade.com/features/fair-trade-clothing)
+
 ## Tutor Support
 
 Special Thanks to tutor support team for all the patience and valuable support.
