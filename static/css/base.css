@@ -37,6 +37,11 @@ body {
     display: none;
 }
 
+.carousel-item img {
+  max-width: 100%;
+  display: block;
+}
+
 /* -------------------------------------------------------- Base template --- */
 
 footer {
