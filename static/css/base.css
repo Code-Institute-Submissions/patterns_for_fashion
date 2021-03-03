@@ -101,7 +101,8 @@ a:hover {
 }
 
 .main-logo-link {
-    width: fit-content;
+    width: 140px;
+    height: 100px;
 }
 
 .nav-link {

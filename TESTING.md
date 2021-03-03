@@ -12,7 +12,7 @@
 **Test Case** | **Description** | **Expected Results** | **Actual Results** | **Pass/Fail** | **Comments**
 --- | --- | --- | --- | --- | ---
 TC001 | Test Website responsiveness on all screen sizes on chrome browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
-TC002 | Test Website responsiveness on all screen sizes on firefox browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Fail |See [known bugs section](#known-bugs)
+TC002 | Test Website responsiveness on all screen sizes on firefox browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
 TC003 | Test Website responsiveness on all screen sizes on microsoft edge browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
 TC003 | Test Website responsiveness on all screen sizes on opera browser | Website is responsive, all elements contained and no images distorted | Website is responsive, all elements contained and no imgages distorted | Pass |
 TC004 | Test Filter link from the main navigation bar by price, rating, category and all garments | Links work well and filter products accordingly | Links work well and filter products accordingly | Pass |
@@ -198,11 +198,14 @@ TC025 | Test Add Blog Comment | Successfully adds blog comments with name, email
 1. In the production mode images from the blog posts displayed only when debug was set to true.
     -   The problem was the way the images were rendered in blog.html and post_detail.html.
     -   I replaced the syntax {{ MEDIA_URL }}{{ post.image }} to {{ product.image.url }}
+1. The logo image displays enlarged and pixelated on FireFox browser when using for the .main-logo-link class fit-content value for the width property.
+    It is a known issue for FireFox browser for logo image display.
+    -   The problem was fixed by giving width 140px and height 100px values to the .main-logo-link class.
 
 # Known Bugs
 -   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. When adding the fixed-bottom bootstrap property, for some reason
 I couldn't figure out, it hides the bottom content of the page. 
--   The logo image displays enlarged and pixelated on FireFox browser. It is a known issue for FireFox browser for logo image display and none of the found solutions worked yet.
+
 
 <div align="right">
     <b><a href="#contents-testing">↥ Back To Top</a></b>
