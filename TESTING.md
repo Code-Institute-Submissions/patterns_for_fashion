@@ -206,7 +206,7 @@ TC025 | Test Add Blog Comment | Successfully adds blog comments with name, email
 -   The footer was set to stay fixed to bottom on all pages by adding a top margin of 450px. When adding the fixed-bottom bootstrap property, for some reason
 I couldn't figure out, it hides the bottom content of the page. 
 -   About the JavaScript code at the bottom of the html pages. For some reason when tried to move the code snippet into an external js file, the code stopped working. 
--   I tried as much to avoid where possible integrating javascrip tags into html templates.
+-   I tried as much as possible to avoid integrating inline javascript.
 
 <div align="right">
     <b><a href="#contents-testing">↥ Back To Top</a></b>
